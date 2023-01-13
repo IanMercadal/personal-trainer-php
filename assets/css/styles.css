@@ -1,0 +1,11 @@
+:root {
+    --primary-color: #49B51F;
+    --secondary-color: #D3D3D3;
+    --wildcard-green-color: #399F2E;
+    --wildcard-grey-color: #626363;
+    --font: 'Open Sans', sans-serif;
+}
+
+body {
+    font-family: var(--font);
+}
