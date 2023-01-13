@@ -61,27 +61,37 @@
     <h2 id="contacta-nosotros">Conctacta con nosotros</h2>
     <form id="form-contacto" method="POST" action="<?php echo base_url?>solicitud/solicitar">
         <div class="input-box">
-            <label>Nombre</label>
+            <div class="label-state">
+                <label>Nombre</label>
+            </div>
             <input type="text" name="nombre" placeholder="nombre">
         </div>
 
         <div class="input-box">
-            <label>Apellido</label>
+            <div class="label-state">
+                <label>Apellido</label>
+            </div>
             <input type="text" name="apellido" placeholder="apellido">
         </div>
 
         <div class="input-box">
-            <label>Email</label>
+            <div class="label-state">
+                <label>Email</label>
+            </div>
             <input type="email" name="email">
         </div>
 
         <div class="input-box">
-            <label>Teléfono</label>
+            <div class="label-state">
+                <label>Teléfono</label>
+            </div>
             <input type="number" name="telefono">
         </div>
 
         <div class="input-box">
-            <label>Tarifa</label>
+            <div class="label-state">
+                <label>Tarifa</label>
+            </div>
             <select>
                 <option>Primera</option>
                 <option>Segunda</option>
@@ -93,7 +103,9 @@
         </div>
 
         <div class="input-box">
-            <label>Descripción</label>
+            <div class="label-state">
+                <label>Descripción</label>
+            </div>
             <textarea name="descripcion" id="" cols="30" rows="10"></textarea>
         </div>
 

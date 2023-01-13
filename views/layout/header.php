@@ -29,7 +29,7 @@
         </div>
 
         <div class="user-state-header">
-            <a class="login" href="#">Iniciar Sesión</a>
+            <a class="login" href="<?php echo base_url?>usuario/login">Iniciar Sesión</a>
         </div>
     </nav>
 
