@@ -1,11 +1,115 @@
 :root {
     --primary-color: #49B51F;
     --secondary-color: #D3D3D3;
+    --light-secondary-color: #e4e4e4;
     --wildcard-green-color: #399F2E;
     --wildcard-grey-color: #626363;
-    --font: 'Open Sans', sans-serif;
+    --primary-font: 'Open Sans', sans-serif;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* GLOBALES */
+html {
+    box-sizing: border-box;
+    font-family: var(--primary-font);
+    font-size: 62.5%;
 }
 
 body {
-    font-family: var(--font);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    align-items: center;
+}
+
+h1 {
+    font-size: 3rem;   
+}
+h2 {
+    font-size: 2.4rem;   
+}
+h3 {
+    font-size: 2rem;   
+}
+a {
+    text-decoration: none;
+}
+/* NAVIGATION */
+
+header {
+    width: 100%;
+}
+nav {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center;
+    align-items: center;
+    background-color: var(--light-secondary-color);
+}
+.options {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+.div-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.nav-logo {
+    width: 50px;
+}
+.nav-link {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #000;
+    padding: 1rem;
+}
+.nav-link:hover {
+    background-color: #fff;
+    color: var(--wildcard-green-color);
+    transition: all ease-in 0.2s;
+}
+.login {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--wildcard-green-color);
+    padding: 1rem;
+    border: 2px solid var(--wildcard-green-color);
+    border-radius: 1rem;
+}
+.login:hover {
+    background-color: #fff;
+    transition: all ease-in 0.2s;
+}
+/* BANNER */
+.banner {
+    background-image: url(../img/run.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: grayscale(80%);
+    height: 500px;
+    width: 100%;
+}
+
+/* FOOTER */
+.footer {
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    justify-items: center;
+    align-items: center;
+    background-color: var(--light-secondary-color);
+    width: 100%;
+}
+.icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
 }
