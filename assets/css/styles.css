@@ -3,7 +3,7 @@
     --secondary-color: #D3D3D3;
     --light-secondary-color: #e4e4e4;
     --wildcard-green-color: #399F2E;
-    --wildcard-grey-color: #626363;
+    --wildcard-gray-color: #626363;
     --primary-font: 'Open Sans', sans-serif;
 }
 
@@ -37,6 +37,7 @@ h3 {
 }
 a {
     text-decoration: none;
+    cursor: pointer;
 }
 p {
     font-size: 1.2rem;
@@ -56,6 +57,24 @@ p {
     height: 100px;
     border-radius: 50%;
     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-primary {
+    padding: 1rem;
+    width: 100px;
+    background-color: var(--wildcard-green-color);
+    color: #fff;
+    font-weight: bolder;
+    text-align: center;
+}
+.btn-primary:hover {
+    color: var(--wildcard-green-color);
+    background-color: var(--secondary-color);
+}
+.unete {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -147,13 +166,47 @@ nav {
 .programa:hover .circle {
     background-color: #eee;
 }
-.programa-titulo {
+.programa-titulo, .tarifa-titulo {
     font-size: 1.4rem;
 }
-.programa > p {
+.programa > p, .tarifa > p , .valor > p {
     padding: 1rem;
 }
 
+/* TARIFAS */
+.tarifas {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    align-items: center;
+    gap: 1rem;
+}
+.tarifa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--wildcard-green-color);
+    opacity: 80%;
+    color: #eee;
+}
+.tarifa:hover {
+    /* background-color: var(--wildcard-gray-color); */
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
+    transition: ease-in-out 0.2s;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color: #000;
+}
+.tarifa .circle {
+    background-color: #fff;
+}
+.valor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary-color);
+}
 /* NOSOTROS */
 .nosotros {
     display: grid;

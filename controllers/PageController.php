@@ -5,5 +5,13 @@ class pageController {
         // Renderizar Vista
         require_once "views/index.php";
     }
+    public function tarifa() {
+        // Renderizar Vista
+        require_once "views/tarifas.php";
+    }
+    public function nosotros() {
+        // Renderizar Vista
+        require_once "views/nosotros.php";
+    }
 }
 ?>
