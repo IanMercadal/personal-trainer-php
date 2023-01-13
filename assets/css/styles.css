@@ -66,10 +66,9 @@ button {
     justify-content: center;
 }
 
-.btn-primary {
+.btn-primary, .btn-editar, .btn-eliminar  {
     padding: 1rem;
     width: 100px;
-    background-color: var(--wildcard-green-color);
     color: #fff;
     font-weight: bolder;
     text-align: center;
@@ -91,6 +90,21 @@ button {
 .btn-secondary:hover {
     background-color: var(--light-secondary-color);
     color: var(--primary-color);
+}
+.btn-primary {
+    background-color: var(--wildcard-green-color);
+}
+.btn-editar {
+    background-color: #399F2E;
+}
+.btn-editar:hover {
+    background-image: linear-gradient(to bottom right, var(--primary-color), white);
+}
+.btn-eliminar {
+    background-color: red;
+}
+.btn-eliminar:hover {
+    background-image: linear-gradient(to bottom right, red, white);
 }
 .unete {
     display: flex;
@@ -125,6 +139,17 @@ textarea {
 }
 .error {
     color: red;
+}
+.form-filtros {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--light-secondary-color);
+    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 1rem;
+    margin: 1rem 0 1rem 0;
 }
 /* NAVIGATION */
 
@@ -369,6 +394,31 @@ nav {
     flex-direction: column;
     justify-content: flex-start;
 }
+
+/* LISTA USUARIOS */
+.lista-usuarios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+}
+.lista-usuario:hover {
+    transform: scale(1.02);
+    transition: all ease-in 0.2s;
+    background-color: var(--primary-color);
+    color: #fff;
+}
+.lista-usuario {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--light-secondary-color);
+    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 1rem;
+}
+
 /* FOOTER */
 .footer {
     display: grid;
