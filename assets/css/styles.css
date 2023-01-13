@@ -51,6 +51,10 @@ p {
     text-align: center;
 }
 
+button {
+    border: none;
+}
+
 /* UTILS */
 .circle {
     width: 100px;
@@ -77,6 +81,20 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+.input-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+label {
+    font-size: 1.4rem;
+}
+input {
+    font-size: 1.4rem;
+}
+textarea {
+    resize: none;
 }
 /* NAVIGATION */
 
@@ -208,7 +226,7 @@ nav {
     background-color: var(--secondary-color);
 }
 /* NOSOTROS */
-.nosotros {
+.nosotros, .sobre-nosotros {
     display: grid;
     grid-template-columns: repeat(2,1fr);
     gap: 1rem;
@@ -226,6 +244,15 @@ nav {
     align-items: center;
     justify-content: flex-start;
     gap: 1rem;
+}
+#contacta-nosotros {
+    color: var(--wildcard-green-color);
+}
+#form-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
 }
 /* TESTIMONIAL */ 
 .tres-columnas {
