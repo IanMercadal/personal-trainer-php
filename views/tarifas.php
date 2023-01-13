@@ -1,6 +1,6 @@
 <section class="contenedor">
     <h2 class="text-center">Tarifas</h2>
-
+    
     <div class="tarifas">
         <div class="tarifa">
             <h4 class="tarifa-titulo">Lorem Ipsum</h4>
@@ -8,6 +8,7 @@
                 <img class="nav-logo" src="<?= base_url ?>assets/logo.svg">
             </div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus neque dolorem minima deleniti voluptate. Rerum exercitationem, et illum, quis eaque ipsam aliquam cum amet atque, id voluptas dolorem ipsum pariatur.</p>
+            <p><b>Precio: </b>15$</p>
         </div>
         <div class="tarifa">
             <h4 class="tarifa-titulo">Lorem Ipsum</h4>
@@ -15,6 +16,7 @@
                 <img class="nav-logo" src="<?= base_url ?>assets/logo.svg">
             </div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus neque dolorem minima deleniti voluptate. Rerum exercitationem, et illum, quis eaque ipsam aliquam cum amet atque, id voluptas dolorem ipsum pariatur.</p>
+            <p><b>Precio: </b>15$</p>
         </div>
         <div class="tarifa">
             <h4 class="tarifa-titulo">Lorem Ipsum</h4>
@@ -22,6 +24,7 @@
                 <img class="nav-logo" src="<?= base_url ?>assets/logo.svg">
             </div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus neque dolorem minima deleniti voluptate. Rerum exercitationem, et illum, quis eaque ipsam aliquam cum amet atque, id voluptas dolorem ipsum pariatur.</p>
+            <p><b>Precio: </b>15$</p>
         </div>
         <div class="tarifa">
             <h4 class="tarifa-titulo">Lorem Ipsum</h4>
@@ -29,6 +32,7 @@
                 <img class="nav-logo" src="<?= base_url ?>assets/logo.svg">
             </div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus neque dolorem minima deleniti voluptate. Rerum exercitationem, et illum, quis eaque ipsam aliquam cum amet atque, id voluptas dolorem ipsum pariatur.</p>
+            <p><b>Precio: </b>15$</p>
         </div>
         <div class="tarifa">
             <h4 class="tarifa-titulo">Lorem Ipsum</h4>
@@ -36,6 +40,7 @@
                 <img class="nav-logo" src="<?= base_url ?>assets/logo.svg">
             </div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus neque dolorem minima deleniti voluptate. Rerum exercitationem, et illum, quis eaque ipsam aliquam cum amet atque, id voluptas dolorem ipsum pariatur.</p>
+            <p><b>Precio: </b>15$</p>
         </div>
         <div class="tarifa">
             <h4 class="tarifa-titulo">Lorem Ipsum</h4>
@@ -43,6 +48,7 @@
                 <img class="nav-logo" src="<?= base_url ?>assets/logo.svg">
             </div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus neque dolorem minima deleniti voluptate. Rerum exercitationem, et illum, quis eaque ipsam aliquam cum amet atque, id voluptas dolorem ipsum pariatur.</p>
+            <p><b>Precio: </b>15$</p>
         </div>
     </div>
 

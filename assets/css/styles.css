@@ -65,7 +65,9 @@ button {
     align-items: center;
     justify-content: center;
 }
-
+.btn-create {
+    margin: 1rem;
+}
 .btn-primary, .btn-editar, .btn-eliminar  {
     padding: 1rem;
     width: 100px;
@@ -73,6 +75,9 @@ button {
     font-weight: bolder;
     text-align: center;
     font-size: 1.4rem;
+}
+.btn-editar, .btn-eliminar {
+    border-radius: 1rem;
 }
 .btn-primary:hover {
     color: var(--wildcard-green-color);
@@ -300,7 +305,7 @@ nav {
 #contacta-nosotros {
     color: var(--wildcard-green-color);
 }
-#form-contacto {
+#form-contacto, .form-crear {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -396,7 +401,8 @@ nav {
 }
 
 /* LISTA USUARIOS */
-.lista-usuarios {
+.lista-admin {
+    margin-top: 1.2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -418,7 +424,25 @@ nav {
     justify-content: space-around;
     border-radius: 1rem;
 }
-
+/* SOLICITUD */
+.lista-solicitud {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--light-secondary-color);
+    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 1rem;
+}
+.lista-solicitud-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    justify-content: space-around;
+}
 /* FOOTER */
 .footer {
     display: grid;

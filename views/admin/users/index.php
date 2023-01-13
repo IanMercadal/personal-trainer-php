@@ -1,6 +1,6 @@
 <section class="contenedor">
     <h2 class="text-center">Usuarios</h2>
-
+    
     <div class="filtros-usuario">
         <form class="form-filtros">
             <p>Campo</p>
@@ -17,7 +17,7 @@
             <a class="btn-eliminar" href="#">Desc</a>
         </form>
     </div>
-    <div class="lista-usuarios">
+    <div class="lista-admin">
         <div class="lista-usuario">
             <p><b>1.</b></p>
             <p>John Doe</p>

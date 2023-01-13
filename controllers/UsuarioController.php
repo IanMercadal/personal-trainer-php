@@ -11,10 +11,14 @@ class usuarioController {
     public function admin() {
         require_once "views/admin/users/index.php";
     }
+    public function crear() {
+        require_once "views/admin/users/crear.php";
+    }
 
     // Métodos
     public function autenticarse() {
         header("Location:" . base_url . "usuario/perfil");
     }
+    
 }
 ?>

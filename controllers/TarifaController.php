@@ -1,8 +1,11 @@
 <?php 
 
 class tarifaController {
-    public function index() {
-        echo "<h1>Tarifas</h1>";
+    public function admin() {
+        require_once "views/admin/tarifas/index.php";
+    }
+    public function crear() {
+        require_once "views/admin/tarifas/crear.php";
     }
 }
 ?>
