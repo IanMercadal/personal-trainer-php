@@ -2,7 +2,8 @@
 
 class pageController {
     public function index() {
-        echo "<h1>Index</h1>";
+        // Renderizar Vista
+        require_once "views/index.php";
     }
 }
 ?>

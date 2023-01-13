@@ -28,7 +28,7 @@
             <a class="nav-link" href="#">Nosotros</a>
         </div>
 
-        <div>
+        <div class="user-state-header">
             <a class="login" href="#">Iniciar Sesión</a>
         </div>
     </nav>
