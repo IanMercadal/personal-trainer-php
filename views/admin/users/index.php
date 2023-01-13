@@ -24,7 +24,7 @@
             <p>correo@corre.es</p>
             <p>11111111</p>
             <p>Tarifa Media</p>
-            <a class="btn-editar" href="#">Editar</a>
+            <a class="btn-editar" href="<?php base_url ?>editar">Editar</a>
             <a class="btn-eliminar" href="#">Eliminar</a>
         </div>
         <div class="lista-usuario">

@@ -7,5 +7,8 @@ class tarifaController {
     public function crear() {
         require_once "views/admin/tarifas/crear.php";
     }
+    public function editar() {
+        require_once "views/admin/tarifas/editar.php";
+    }
 }
 ?>

@@ -14,6 +14,9 @@ class usuarioController {
     public function crear() {
         require_once "views/admin/users/crear.php";
     }
+    public function editar() {
+        require_once "views/admin/users/editar.php";
+    }
 
     // Métodos
     public function autenticarse() {
