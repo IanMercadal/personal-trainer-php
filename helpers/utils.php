@@ -16,7 +16,6 @@ class utils {
             return false;
         }
     }
-
     public static function validarEmail($email) {
         if(isset($email)) {
             if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -27,6 +26,12 @@ class utils {
             return false;
         }
     }
+    public static function validarTelefono($telefono) {
+        if(isset($telefono) && strlen($telefono) === 9) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
-
 ?>

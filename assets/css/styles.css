@@ -56,10 +56,6 @@ button {
     border: none;
 }
 
-strong {
-    margin: 0px 0px 1rem 0px;
-}
-
 /* UTILS */
 .circle {
     width: 100px;

@@ -25,14 +25,20 @@
         <div class="input-box">
             <div class="label-state">
                 <label>Email</label>
+                <?php if(isset($_SESSION["errores"]["email"])) {
+                    echo "<strong class='error'>". $_SESSION['errores']["email"]  ."</strong>";
+                } ?>
             </div>
             <input required type="email" name="email">
         </div>
         <div class="input-box">
             <div class="label-state">
                 <label>Teléfono</label>
+                <?php if(isset($_SESSION["errores"]["telefono"])) {
+                    echo "<strong class='error'>". $_SESSION['errores']["telefono"]  ."</strong>";
+                } ?>
             </div>
-            <input required type="telefono" name="telefono">
+            <input required type="number" name="telefono">
         </div>
         <div class="input-box">
             <div class="label-state">

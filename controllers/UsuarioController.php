@@ -29,8 +29,7 @@ class usuarioController {
     // Métodos
     public function autenticarse() {
         if(isset($_POST)) {
-            header("Location:" . base_url . "usuario/perfil");
-            die();
+            
         }
     }
     public function save() {
@@ -40,14 +39,17 @@ class usuarioController {
 
             $nombre = isset($_POST['nombre']) ? $_POST['nombre'] : false;
             $apellido = isset($_POST['apellido']) ? $_POST['apellido'] : false;
-            $telefono = isset($_POST['telefono']) ? $_POST['telefono'] : false;
+            $telefono = Utils::validarTelefono($_POST['telefono']);
             $tarifa = isset($_POST['tarifa']) ? $_POST['tarifa'] : false;
+            $email =  Utils::validarEmail($_POST['email']);
             $password = isset($_POST['password']) ? $_POST['password'] : false;
             $repassword = isset($_POST['repassword']) ? $_POST['repassword'] : false;
-            $email =  Utils::validarEmail($_POST['email']);
-
+            
             if(!$email) {
                 $errores['email'] = "El correo no es valido, inténtalo de nuevo";
+            }
+            if(!$telefono) {
+                $errores['telefono'] = "El telefono no es valido, inténtalo de nuevo";
             }
 
             if($nombre && $apellido && $email && $telefono && $tarifa && $password && $repassword) {
