@@ -1,9 +1,17 @@
 <?php 
 
+require_once "helpers/utils.php";
+require_once "models/usuario.php";
+
 class usuarioController {
     public function login() {
-        // Renderizar Vista
         require_once "views/login.php";
+    }
+    public function logout() {
+        if(isset($_SERVER["usuario"])) {
+            unset($_SERVER["usuario"]);
+        }
+        header("Location:" . base_url);
     }
     public function perfil() {
         require_once "views/user/index.php";
@@ -20,8 +28,62 @@ class usuarioController {
 
     // Métodos
     public function autenticarse() {
-        header("Location:" . base_url . "usuario/perfil");
+        if(isset($_POST)) {
+            header("Location:" . base_url . "usuario/perfil");
+            die();
+        }
     }
-    
+    public function save() {
+        if(isset($_POST)) {
+
+            $errores = [];
+
+            $nombre = isset($_POST['nombre']) ? $_POST['nombre'] : false;
+            $apellido = isset($_POST['apellido']) ? $_POST['apellido'] : false;
+            $telefono = isset($_POST['telefono']) ? $_POST['telefono'] : false;
+            $tarifa = isset($_POST['tarifa']) ? $_POST['tarifa'] : false;
+            $password = isset($_POST['password']) ? $_POST['password'] : false;
+            $repassword = isset($_POST['repassword']) ? $_POST['repassword'] : false;
+            $email =  Utils::validarEmail($_POST['email']);
+
+            if(!$email) {
+                $errores['email'] = "El correo no es valido, inténtalo de nuevo";
+            }
+
+            if($nombre && $apellido && $email && $telefono && $tarifa && $password && $repassword) {
+                if($password === $repassword) {
+                    /* Validar passwords 1. Longitud de 12 2. Tener 8 letras 3. Tener 4 numeros*/
+                    $validacion = Utils::validarPassword($password);
+                    if($validacion) {
+                        $usuario = new Usuario();
+                        $usuario->setNombre($nombre);
+                        $usuario->setApellido($apellido);
+                        $usuario->setEmail($email);
+                        $usuario->setTelefono($telefono);
+                        $usuario->setPassword($password);
+                        $usuario->setIdTarifa($tarifa);
+
+                        $save = $usuario->save();
+
+                        if($save){
+                            header("Location:" . base_url . "usuario/admin");
+                            die();
+                        }else{
+                            $errores['registro'] = "El registro ha fallado, inténtalo de nuevo";
+                        }
+                    } else {
+                        $errores["password"] = "Las contraseña no cumple las condiciones";
+                    }
+                } else {
+                    $errores["password"] = "Las contraseñas no coinciden";
+                }
+            } else {
+                $errores["campos"] = "Todos los campos son obligatorios";
+            }
+
+            $_SESSION['errores'] = $errores;
+            header("Location:" . base_url . "usuario/crear");
+        }
+    }
 }
 ?>
