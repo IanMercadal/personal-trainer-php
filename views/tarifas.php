@@ -2,54 +2,17 @@
     <h2 class="text-center">Tarifas</h2>
     
     <div class="tarifas">
+
+    <?php while ($tarifa = $tarifas->fetch_object()) :?>
         <div class="tarifa">
-            <h4 class="tarifa-titulo">Lorem Ipsum</h4>
+            <h4 class="tarifa-titulo"><?php echo $tarifa->nombre ?></h4>
             <div class="circle">
                 <img class="nav-logo" src="<?= base_url ?>assets/logo.svg">
             </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus neque dolorem minima deleniti voluptate. Rerum exercitationem, et illum, quis eaque ipsam aliquam cum amet atque, id voluptas dolorem ipsum pariatur.</p>
-            <p><b>Precio: </b>15$</p>
+            <p><?php echo $tarifa->descripcion ?></p>
+            <p><b>Precio: </b><?php echo $tarifa->precio?>$</p>
         </div>
-        <div class="tarifa">
-            <h4 class="tarifa-titulo">Lorem Ipsum</h4>
-            <div class="circle">
-                <img class="nav-logo" src="<?= base_url ?>assets/logo.svg">
-            </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus neque dolorem minima deleniti voluptate. Rerum exercitationem, et illum, quis eaque ipsam aliquam cum amet atque, id voluptas dolorem ipsum pariatur.</p>
-            <p><b>Precio: </b>15$</p>
-        </div>
-        <div class="tarifa">
-            <h4 class="tarifa-titulo">Lorem Ipsum</h4>
-            <div class="circle">
-                <img class="nav-logo" src="<?= base_url ?>assets/logo.svg">
-            </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus neque dolorem minima deleniti voluptate. Rerum exercitationem, et illum, quis eaque ipsam aliquam cum amet atque, id voluptas dolorem ipsum pariatur.</p>
-            <p><b>Precio: </b>15$</p>
-        </div>
-        <div class="tarifa">
-            <h4 class="tarifa-titulo">Lorem Ipsum</h4>
-            <div class="circle">
-                <img class="nav-logo" src="<?= base_url ?>assets/logo.svg">
-            </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus neque dolorem minima deleniti voluptate. Rerum exercitationem, et illum, quis eaque ipsam aliquam cum amet atque, id voluptas dolorem ipsum pariatur.</p>
-            <p><b>Precio: </b>15$</p>
-        </div>
-        <div class="tarifa">
-            <h4 class="tarifa-titulo">Lorem Ipsum</h4>
-            <div class="circle">
-                <img class="nav-logo" src="<?= base_url ?>assets/logo.svg">
-            </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus neque dolorem minima deleniti voluptate. Rerum exercitationem, et illum, quis eaque ipsam aliquam cum amet atque, id voluptas dolorem ipsum pariatur.</p>
-            <p><b>Precio: </b>15$</p>
-        </div>
-        <div class="tarifa">
-            <h4 class="tarifa-titulo">Lorem Ipsum</h4>
-            <div class="circle">
-                <img class="nav-logo" src="<?= base_url ?>assets/logo.svg">
-            </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus neque dolorem minima deleniti voluptate. Rerum exercitationem, et illum, quis eaque ipsam aliquam cum amet atque, id voluptas dolorem ipsum pariatur.</p>
-            <p><b>Precio: </b>15$</p>
-        </div>
+    <?php endwhile; ?>
     </div>
 
     <div class="unete">

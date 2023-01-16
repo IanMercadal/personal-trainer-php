@@ -1,7 +1,7 @@
 <section class="contenedor">
     <h2 class="text-center">Crear tarifa</h2>
 
-    <form class="form-crear" method="post">
+    <form class="form-crear" method="post" action="<?php echo base_url;?>tarifa/save">
 
         <div class="input-box">
             <div class="label-state">
