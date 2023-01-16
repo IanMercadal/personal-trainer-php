@@ -55,6 +55,11 @@ p {
 button {
     border: none;
 }
+.query-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 /* UTILS */
 .circle {

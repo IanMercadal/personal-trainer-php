@@ -132,12 +132,29 @@ class usuarioController {
             $apellido = isset($_POST['apellido']) ? $_POST['apellido'] : false;
             $tarifa = isset($_POST['tarifa']) ? $_POST['tarifa'] : false;
             $id_usuario = isset($_POST['id_usuario']) ? $_POST['id_usuario'] : false;
-
             $telefono = $_POST['telefono'];
             $email = $_POST['email'];
 
             $telefono_validar = Utils::validarTelefono($telefono);
             $email_validar =  Utils::validarEmail($email);
+
+            if(!$nombre) {
+                $errores['nombre'] = "El nombre no es valido, inténtalo de nuevo";
+            }
+            if(!$apellido) {
+                $errores['apellido'] = "El apellido no es valido, inténtalo de nuevo";
+            }
+
+            if(!$tarifa) {
+                $errores['tarifa'] = "La tarifa no es válida, inténtalo de nuevo";
+            }
+            
+            if(!$email_validar) {
+                $errores['email'] = "El correo no es valido, inténtalo de nuevo";
+            }
+            if(!$telefono_validar) {
+                $errores['telefono'] = "El telefono no es valido, inténtalo de nuevo";
+            }
 
             if($id_usuario && $nombre && $apellido && $email_validar && $telefono_validar && $tarifa) {
                 $usuario = new Usuario();

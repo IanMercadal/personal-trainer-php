@@ -7,30 +7,45 @@
         <div class="input-box">
             <div class="label-state">
                 <label>Nombre</label>
+                <?php if(isset($_SESSION["errores"]["nombre"])) {
+                    echo "<strong class='error'>". $_SESSION['errores']["nombre"]  ."</strong>";
+                } ?>
             </div>
             <input type="nombre" name="nombre" value="<?php echo $usuario->nombre; ?>">
         </div>
         <div class="input-box">
             <div class="label-state">
                 <label>Apellido</label>
+                <?php if(isset($_SESSION["errores"]["apellido"])) {
+                    echo "<strong class='error'>". $_SESSION['errores']["apellido"]  ."</strong>";
+                } ?>
             </div>
             <input type="apellido" name="apellido" value="<?php echo $usuario->apellido; ?>">
         </div>
         <div class="input-box">
             <div class="label-state">
                 <label>Email</label>
+                <?php if(isset($_SESSION["errores"]["email"])) {
+                    echo "<strong class='error'>". $_SESSION['errores']["email"]  ."</strong>";
+                } ?>
             </div>
             <input type="email" name="email" value="<?php echo $usuario->email; ?>">
         </div>
         <div class="input-box">
             <div class="label-state">
                 <label>Teléfono</label>
+                <?php if(isset($_SESSION["errores"]["telefono"])) {
+                    echo "<strong class='error'>". $_SESSION['errores']["telefono"]  ."</strong>";
+                } ?>
             </div>
             <input type="number" name="telefono" value="<?php echo $usuario->telefono; ?>">
         </div>
         <div class="input-box">
             <div class="label-state">
                 <label>Tarifa</label>
+                <?php if(isset($_SESSION["errores"]["tarifa"])) {
+                    echo "<strong class='error'>". $_SESSION['errores']["tarifa"]  ."</strong>";
+                } ?>
             </div>
             <select name="tarifa">
                 <option selected></option>
@@ -43,4 +58,5 @@
 
         <button class="btn-primary">Crear</button>
     </form>
+    <?php if(isset($_SESSION)) {unset($_SESSION["errores"]);} ?>
 </section>
