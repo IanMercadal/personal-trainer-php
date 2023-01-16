@@ -29,7 +29,7 @@
         </div>
 
         <div class="user-state-header">
-            <?php if(!isset($_SESSION["usuario"])) :?>
+            <?php if(!isset($_SESSION["identidad"])) :?>
                 <a class="login" href="<?php echo base_url?>usuario/login">Iniciar Sesión</a>
             <?php else : ?>
                 <a class="login" href="<?php echo base_url?>usuario/logout">Cerrar Sesión</a>

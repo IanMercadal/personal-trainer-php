@@ -1,7 +1,7 @@
 <?php 
 
 class tarifaController {
-    public function admin() {
+    public function list() {
         require_once "views/admin/tarifas/index.php";
     }
     public function crear() {

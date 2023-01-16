@@ -17,6 +17,9 @@ class usuarioController {
         require_once "views/user/index.php";
     }
     public function admin() {
+        require_once "views/admin/index.php";
+    }
+    public function list() {
         $usuario = new usuario();
         $usuarios = $usuario->getAll();
         require_once "views/admin/users/index.php";
