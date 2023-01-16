@@ -1,7 +1,7 @@
 <?php 
 
 class solicitudController {
-    public function index() {
+    public function list() {
         require_once "views/solicitudes/index.php";
     }
     public function solicitar() {

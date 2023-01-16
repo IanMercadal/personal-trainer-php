@@ -464,7 +464,7 @@ nav {
 /* ADMIN */
 .panel-admin {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(3,1fr);
     justify-items: center;
     align-items: center;
     justify-content: center;
@@ -484,7 +484,7 @@ nav {
     justify-content: center;
     background-color: var(--wildcard-green-color);
 }
-#panel-usuarios, #panel-tarifas  {
+#panel-usuarios, #panel-tarifas, #panel-solicitud  {
     display: flex;
     flex-direction: column;
     width: 300px;
@@ -499,6 +499,9 @@ nav {
 }
 #panel-tarifas .panel  {
     background-image: url(../img/tarifas.jpg);
+}
+#panel-solicitud .panel  {
+    background-image: url(../img/solicitud.jpg);
 }
 
 /* MEDIA */
