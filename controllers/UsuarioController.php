@@ -30,6 +30,27 @@ class usuarioController {
     public function autenticarse() {
         if(isset($_POST)) {
             
+            $email = $_POST['email'];
+            $password = $_POST['password'];
+
+            $email_validar = Utils::validarEmail($email);
+            $password_validar =  Utils::validarPassword($password);
+
+            if($email && $password) {
+                $usuario = new Usuario();
+                $usuario->setEmail($email);
+                $usuario->setPassword($password);
+
+                $identidad = $usuario->login();
+
+                if($identidad && is_object($identidad)) {
+                    $_SESSION['identidad'] = $identidad;
+                    header("Location:".base_url."usuario/perfil");
+                    die();
+                }
+            } else {
+                echo "mal";
+            }
         }
     }
     public function save() {
@@ -39,20 +60,24 @@ class usuarioController {
 
             $nombre = isset($_POST['nombre']) ? $_POST['nombre'] : false;
             $apellido = isset($_POST['apellido']) ? $_POST['apellido'] : false;
-            $telefono = Utils::validarTelefono($_POST['telefono']);
             $tarifa = isset($_POST['tarifa']) ? $_POST['tarifa'] : false;
-            $email =  Utils::validarEmail($_POST['email']);
             $password = isset($_POST['password']) ? $_POST['password'] : false;
             $repassword = isset($_POST['repassword']) ? $_POST['repassword'] : false;
             
-            if(!$email) {
+            $telefono = $_POST['telefono'];
+            $email = $_POST['email'];
+
+            $telefono_validar = Utils::validarTelefono($telefono);
+            $email_validar =  Utils::validarEmail($email);
+
+            if(!$email_validar) {
                 $errores['email'] = "El correo no es valido, inténtalo de nuevo";
             }
-            if(!$telefono) {
+            if(!$telefono_validar) {
                 $errores['telefono'] = "El telefono no es valido, inténtalo de nuevo";
             }
 
-            if($nombre && $apellido && $email && $telefono && $tarifa && $password && $repassword) {
+            if($nombre && $apellido && $email_validar && $telefono_validar && $tarifa && $password && $repassword) {
                 if($password === $repassword) {
                     /* Validar passwords 1. Longitud de 12 2. Tener 8 letras 3. Tener 4 numeros*/
                     $validacion = Utils::validarPassword($password);

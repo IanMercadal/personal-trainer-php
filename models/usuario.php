@@ -42,7 +42,7 @@ class usuario {
 
     public function getPassword()
     {
-        return $this->password;
+        return password_hash($this->db->real_escape_string($this->password), PASSWORD_BCRYPT, ['cost' => 4]);
     }
 
     public function getIdTarifa()
@@ -110,6 +110,27 @@ class usuario {
         $result = false;
         if($save) {
             $result = true;
+        }
+        return $result;
+    }
+
+    public function login() {
+        $result = false;
+        $email = $this->email;
+        $password = $this->password;
+
+        $sql = "SELECT * FROM usuarios WHERE email = '{$email}' ";
+        $login = $this->db->query($sql);
+
+        if($login && $login->num_rows == 1) {
+            $user = $login->fetch_object();
+
+			// Verificar contraseña
+			$verify = password_verify($password, $user->password);
+
+            if($verify) {
+                $result = $user;
+            }
         }
         return $result;
     }
