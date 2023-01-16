@@ -41,6 +41,8 @@ class usuarioController {
     // Métodos
     public function autenticarse() {
         if(isset($_POST)) {
+
+            $errores = [];
             
             $email = $_POST['email'];
             $password = $_POST['password'];
@@ -48,7 +50,7 @@ class usuarioController {
             $email_validar = Utils::validarEmail($email);
             $password_validar =  Utils::validarPassword($password);
 
-            if($email && $password) {
+            if($email_validar && $password_validar) {
                 $usuario = new Usuario();
                 $usuario->setEmail($email);
                 $usuario->setPassword($password);
@@ -59,10 +61,14 @@ class usuarioController {
                     $_SESSION['identidad'] = $identidad;
                     header("Location:".base_url."usuario/perfil");
                     die();
+                } else {
+                    $errores["login"] = "Error, credenciales incorrectas";
                 }
             } else {
-                echo "mal";
+                $errores["campos"] = "Error, rellenar todos los campos";
             }
+            $_SESSION['errores'] = $errores;
+            header("Location:" . base_url . "usuario/login");
         }
     }
     public function save() {

@@ -13,7 +13,13 @@
             <div class="input-box">
                 <div class="label-state">
                     <label>Email</label>
-                    <!-- <strong class="error">El correo no existe</strong> -->
+                    <?php if(isset($_SESSION["errores"]["login"])) {
+                        echo "<strong class='error'>". $_SESSION['errores']["login"]  ."</strong>";
+                    } ?>
+
+                    <?php if(isset($_SESSION["errores"]["campos"])) {
+                        echo "<strong class='error'>". $_SESSION['errores']["campos"]  ."</strong>";
+                    } ?>
                 </div>
                 <input type="email" name="email">
             </div>
@@ -27,5 +33,6 @@
     
             <button class="btn-primary">Login</button>
         </form>
+        <?php if(isset($_SESSION)) {unset($_SESSION["errores"]);} ?>
     </div>
 </section>
