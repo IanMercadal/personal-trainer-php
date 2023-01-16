@@ -17,12 +17,21 @@ class usuarioController {
         require_once "views/user/index.php";
     }
     public function admin() {
+        $usuario = new usuario();
+        $usuarios = $usuario->getAll();
         require_once "views/admin/users/index.php";
     }
     public function crear() {
         require_once "views/admin/users/crear.php";
     }
     public function editar() {
+        if(isset($_GET["id_usuario"])) {
+            $id = $_GET['id_usuario'];
+
+            $usuario = new usuario();
+            $usuario->setIdUsuario($id);
+            $usuario = $usuario->getOne();
+        }
         require_once "views/admin/users/editar.php";
     }
 
@@ -110,6 +119,44 @@ class usuarioController {
 
             $_SESSION['errores'] = $errores;
             header("Location:" . base_url . "usuario/crear");
+        }
+    }
+    public function update() {
+        $errores = [];
+
+        if(isset($_POST)) {
+            $nombre = isset($_POST['nombre']) ? $_POST['nombre'] : false;
+            $apellido = isset($_POST['apellido']) ? $_POST['apellido'] : false;
+            $tarifa = isset($_POST['tarifa']) ? $_POST['tarifa'] : false;
+            $id_usuario = isset($_POST['id_usuario']) ? $_POST['id_usuario'] : false;
+
+            $telefono = $_POST['telefono'];
+            $email = $_POST['email'];
+
+            $telefono_validar = Utils::validarTelefono($telefono);
+            $email_validar =  Utils::validarEmail($email);
+
+            if($id_usuario && $nombre && $apellido && $email_validar && $telefono_validar && $tarifa) {
+                $usuario = new Usuario();
+                $usuario->setIdUsuario($id_usuario);
+                $usuario->setNombre($nombre);
+                $usuario->setApellido($apellido);
+                $usuario->setEmail($email);
+                $usuario->setTelefono($telefono);
+
+                $update = $usuario->update();
+                if($update) {
+                    header("Location:" . base_url . "page/query_state");
+                    die();
+                } else {
+                    $errores["actualizar"] = "Error al actualizar, inténtalo de nuevo";
+                }
+            } else {
+                $errores["campos"] = "Todos los campos son obligatorios";
+            }
+
+            $_SESSION['errores'] = $errores;
+            header("Location:" . base_url . "usuario/editar&id_usuario=" . $_GET["id_usuario"]);
         }
     }
 }

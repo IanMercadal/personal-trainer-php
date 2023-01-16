@@ -113,7 +113,16 @@ class usuario {
         }
         return $result;
     }
+    public function update() {
+        $sql = "UPDATE usuarios SET nombre='{$this->getNombre()}', apellido='{$this->getApellido()}', email='{$this->getEmail()}', telefono={$this->getTelefono()} WHERE id_usuario={$this->getIdUsuario()}; ";
+        $save = $this->db->query($sql);
 
+        $result = false;
+        if($save) {
+            $result = true;
+        }
+        return $result;
+    }
     public function login() {
         $result = false;
         $email = $this->email;
@@ -133,6 +142,16 @@ class usuario {
             }
         }
         return $result;
+    }
+
+    public function getAll() {
+        $usuarios = $this->db->query("SELECT * FROM usuarios ORDER BY id_usuario");
+        return $usuarios;
+    }
+
+    public function getOne() {
+        $usuario = $this->db->query("SELECT * FROM usuarios WHERE id_usuario = {$this->getIdUsuario()}");
+        return $usuario->fetch_object();
     }
 }
 

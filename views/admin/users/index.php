@@ -18,77 +18,16 @@
         </form>
     </div>
     <div class="lista-admin">
+    <?php while ($usuario = $usuarios->fetch_object()) :?>
         <div class="lista-usuario">
             <p><b>1.</b></p>
-            <p>John Doe</p>
-            <p>correo@corre.es</p>
-            <p>11111111</p>
-            <p>Tarifa Media</p>
-            <a class="btn-editar" href="<?php base_url ?>editar">Editar</a>
+            <p><?php echo $usuario->nombre . " " . $usuario->apellido?></p>
+            <p><?php echo $usuario->email ?></p>
+            <p><?php echo $usuario->telefono ?></p>
+            <p>Tarifa <?php echo $usuario->id_tarifa ?></p>
+            <a class="btn-editar" href="<?php base_url ?>editar&id_usuario=<?php echo $usuario->id_usuario?>">Editar</a>
             <a class="btn-eliminar" href="#">Eliminar</a>
         </div>
-        <div class="lista-usuario">
-            <p><b>1.</b></p>
-            <p>John Doe</p>
-            <p>correo@corre.es</p>
-            <p>11111111</p>
-            <p>Tarifa Media</p>
-            <a class="btn-editar" href="#">Editar</a>
-            <a class="btn-eliminar" href="#">Eliminar</a>
-        </div>
-        <div class="lista-usuario">
-            <p><b>1.</b></p>
-            <p>John Doe</p>
-            <p>correo@corre.es</p>
-            <p>11111111</p>
-            <p>Tarifa Media</p>
-            <a class="btn-editar" href="#">Editar</a>
-            <a class="btn-eliminar" href="#">Eliminar</a>
-        </div>
-        <div class="lista-usuario">
-            <p><b>1.</b></p>
-            <p>John Doe</p>
-            <p>correo@corre.es</p>
-            <p>11111111</p>
-            <p>Tarifa Media</p>
-            <a class="btn-editar" href="#">Editar</a>
-            <a class="btn-eliminar" href="#">Eliminar</a>
-        </div>
-        <div class="lista-usuario">
-            <p><b>1.</b></p>
-            <p>John Doe</p>
-            <p>correo@corre.es</p>
-            <p>11111111</p>
-            <p>Tarifa Media</p>
-            <a class="btn-editar" href="#">Editar</a>
-            <a class="btn-eliminar" href="#">Eliminar</a>
-        </div>
-        <div class="lista-usuario">
-            <p><b>1.</b></p>
-            <p>John Doe</p>
-            <p>correo@corre.es</p>
-            <p>11111111</p>
-            <p>Tarifa Media</p>
-            <a class="btn-editar" href="#">Editar</a>
-            <a class="btn-eliminar" href="#">Eliminar</a>
-        </div>
-        <div class="lista-usuario">
-            <p><b>1.</b></p>
-            <p>John Doe</p>
-            <p>correo@corre.es</p>
-            <p>11111111</p>
-            <p>Tarifa Media</p>
-            <a class="btn-editar" href="#">Editar</a>
-            <a class="btn-eliminar" href="#">Eliminar</a>
-        </div>
-        <div class="lista-usuario">
-            <p><b>1.</b></p>
-            <p>John Doe</p>
-            <p>correo@corre.es</p>
-            <p>11111111</p>
-            <p>Tarifa Media</p>
-            <a class="btn-editar" href="#">Editar</a>
-            <a class="btn-eliminar" href="#">Eliminar</a>
-        </div>
+    <?php endwhile; ?>
     </div>
 </section>

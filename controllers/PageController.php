@@ -13,5 +13,8 @@ class pageController {
         // Renderizar Vista
         require_once "views/nosotros.php";
     }
+    public function query_state() {
+        require_once "views/query_state.php";
+    }
 }
 ?>
