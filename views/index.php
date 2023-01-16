@@ -3,30 +3,30 @@
 
     <div class="programas">
         <div class="programa">
-            <h4 class="programa-titulo">Lorem Ipsum</h4>
+            <h4 class="programa-titulo">Body Building</h4>
             <div class="circle">
                 <img class="nav-logo" src="<?= base_url ?>assets/logo.svg">
             </div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus neque dolorem minima deleniti voluptate. Rerum exercitationem, et illum, quis eaque ipsam aliquam cum amet atque, id voluptas dolorem ipsum pariatur.</p>
         </div>
         <div class="programa">
-            <h4 class="programa-titulo">Lorem Ipsum</h4>
+            <h4 class="programa-titulo">Fat Burn</h4>
             <div class="circle">
-                <img class="nav-logo" src="<?= base_url ?>assets/logo.svg">
+                <img class="nav-logo" src="<?= base_url ?>assets/burn.svg">
             </div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus neque dolorem minima deleniti voluptate. Rerum exercitationem, et illum, quis eaque ipsam aliquam cum amet atque, id voluptas dolorem ipsum pariatur.</p>
         </div>
         <div class="programa">
-            <h4 class="programa-titulo">Lorem Ipsum</h4>
+            <h4 class="programa-titulo">Improve Speed</h4>
             <div class="circle">
-                <img class="nav-logo" src="<?= base_url ?>assets/logo.svg">
+                <img class="nav-logo" src="<?= base_url ?>assets/speed.svg">
             </div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus neque dolorem minima deleniti voluptate. Rerum exercitationem, et illum, quis eaque ipsam aliquam cum amet atque, id voluptas dolorem ipsum pariatur.</p>
         </div>
         <div class="programa">
-            <h4 class="programa-titulo">Lorem Ipsum</h4>
+            <h4 class="programa-titulo">Diet Calendar</h4>
             <div class="circle">
-                <img class="nav-logo" src="<?= base_url ?>assets/logo.svg">
+                <img class="nav-logo" src="<?= base_url ?>assets/diet.svg">
             </div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus neque dolorem minima deleniti voluptate. Rerum exercitationem, et illum, quis eaque ipsam aliquam cum amet atque, id voluptas dolorem ipsum pariatur.</p>
         </div>
@@ -62,12 +62,12 @@
             <p class="testimonial-nombre">John Doe</p>
         </div>
         <div class="testimonial">
-            <img class="testimonial-imagen" src="<?= base_url ?>assets/img/users/pic-1.png">
+            <img class="testimonial-imagen" src="<?= base_url ?>assets/img/users/pic-2.png">
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit incidunt laborum a, ut laudantium animi quisquam. Labore minima, nemo cupiditate explicabo corporis nihil eius, quia sequi minus perspiciatis unde dignissimos!</p>
             <p class="testimonial-nombre">John Doe</p>
         </div>
         <div class="testimonial">
-            <img class="testimonial-imagen" src="<?= base_url ?>assets/img/users/pic-1.png">
+            <img class="testimonial-imagen" src="<?= base_url ?>assets/img/users/pic-3.png">
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit incidunt laborum a, ut laudantium animi quisquam. Labore minima, nemo cupiditate explicabo corporis nihil eius, quia sequi minus perspiciatis unde dignissimos!</p>
             <p class="testimonial-nombre">John Doe</p>
         </div>

@@ -16,42 +16,18 @@
     <h2 class="text-center">Objetivos</h2>
     <div id="valores" class="tres-columnas">
         <div class="valor">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trophy" width="72" height="72" viewBox="0 0 24 24" stroke-width="1.5" stroke="#399F2E" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <line x1="8" y1="21" x2="16" y2="21" />
-                <line x1="12" y1="17" x2="12" y2="21" />
-                <line x1="7" y1="4" x2="17" y2="4" />
-                <path d="M17 4v8a5 5 0 0 1 -10 0v-8" />
-                <circle cx="5" cy="9" r="2" />
-                <circle cx="19" cy="9" r="2" />
-            </svg>
-            <h3>Lorem ipsum</h3>
+            <img class="nav-logo" src="<?= base_url ?>assets/goals.svg">
+            <h3>Metas</h3>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero eligendi recusandae tempora sequi aut aperiam inventore dolorem laborum cupiditate. Error quaerat animi excepturi quis nobis ad tempora magnam saepe voluptas.</p>
         </div>
         <div class="valor">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trophy" width="72" height="72" viewBox="0 0 24 24" stroke-width="1.5" stroke="#399F2E" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <line x1="8" y1="21" x2="16" y2="21" />
-                <line x1="12" y1="17" x2="12" y2="21" />
-                <line x1="7" y1="4" x2="17" y2="4" />
-                <path d="M17 4v8a5 5 0 0 1 -10 0v-8" />
-                <circle cx="5" cy="9" r="2" />
-                <circle cx="19" cy="9" r="2" />
-            </svg>
-            <h3>Lorem ipsum</h3>
+            <img class="nav-logo" src="<?= base_url ?>assets/diversion.svg">
+            <h3>Diversión</h3>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero eligendi recusandae tempora sequi aut aperiam inventore dolorem laborum cupiditate. Error quaerat animi excepturi quis nobis ad tempora magnam saepe voluptas.</p>
         </div>
         <div class="valor">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trophy" width="72" height="72" viewBox="0 0 24 24" stroke-width="1.5" stroke="#399F2E" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <line x1="8" y1="21" x2="16" y2="21" />
-                <line x1="12" y1="17" x2="12" y2="21" />
-                <line x1="7" y1="4" x2="17" y2="4" />
-                <path d="M17 4v8a5 5 0 0 1 -10 0v-8" />
-                <circle cx="5" cy="9" r="2" />
-                <circle cx="19" cy="9" r="2" />
-            </svg>
-            <h3>Lorem ipsum</h3>
+            <img class="nav-logo" src="<?= base_url ?>assets/discipline.svg">
+            <h3>Disciplina</h3>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero eligendi recusandae tempora sequi aut aperiam inventore dolorem laborum cupiditate. Error quaerat animi excepturi quis nobis ad tempora magnam saepe voluptas.</p>
         </div>
     </div>
@@ -109,6 +85,6 @@
             <textarea name="descripcion" id="" cols="30" rows="10"></textarea>
         </div>
 
-        <button class="btn-primary">Submit</button>
+        <button class="btn-primary">Enviar</button>
     </form>
 </section>

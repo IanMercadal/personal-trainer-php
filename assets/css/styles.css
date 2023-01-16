@@ -213,7 +213,11 @@ nav {
     transition: all ease-in 0.2s;
 }
 .user-state-header {
+    display: flex;
+    flex-direction: row;
     margin: 1rem;
+    align-items: center;
+    gap: 1rem;
 }
 /* BANNER */
 .banner {
@@ -258,7 +262,6 @@ nav {
 .tarifas {
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(2,1fr);
     align-items: stretch;
     gap: 1rem;
 }
@@ -286,7 +289,11 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: var(--secondary-color);
+    border: 2px solid var(--wildcard-green-color);
+    border-radius: 1rem;
+}
+.valor > img {
+    margin-top: 1rem;
 }
 /* NOSOTROS */
 .nosotros, .sobre-nosotros {
@@ -405,6 +412,11 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+}
+.user-info-emoji {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 /* LISTA USUARIOS */
@@ -548,6 +560,11 @@ nav {
     .panel-admin {
         grid-template-columns: none;
         grid-template-rows: repeat(2,1fr);
+    }
+    .tarifas {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 }
 @media (max-width: 574px) {

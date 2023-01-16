@@ -8,8 +8,8 @@ class usuarioController {
         require_once "views/login.php";
     }
     public function logout() {
-        if(isset($_SERVER["usuario"])) {
-            unset($_SERVER["usuario"]);
+        if(isset($_SESSION["identidad"])) {
+            unset($_SESSION["identidad"]);
         }
         header("Location:" . base_url);
     }
