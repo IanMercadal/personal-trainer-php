@@ -1,4 +1,4 @@
-<section class="contenedor">
+<section id="contenedor-usuarios" class="contenedor">
     <h2 class="text-center">Usuarios</h2>
     
     <div class="filtros-usuario">

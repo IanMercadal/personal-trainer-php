@@ -35,46 +35,56 @@
 
 <section class="contenedor">
     <h2 id="contacta-nosotros">Conctacta con nosotros</h2>
+    <?php if(isset($_SESSION["errores"]["solicitud"])) {
+        echo "<strong class='error'>". $_SESSION['errores']["solicitud"]  ."</strong>";
+    } ?>
     <form id="form-contacto" method="POST" action="<?php echo base_url?>solicitud/solicitar">
         <div class="input-box">
             <div class="label-state">
                 <label>Nombre</label>
             </div>
-            <input type="text" name="nombre" placeholder="nombre">
+            <input required type="text" name="nombre" placeholder="Nombre">
         </div>
 
         <div class="input-box">
             <div class="label-state">
                 <label>Apellido</label>
             </div>
-            <input type="text" name="apellido" placeholder="apellido">
+            <input required type="text" name="apellido" placeholder="Apellido">
         </div>
 
         <div class="input-box">
             <div class="label-state">
                 <label>Email</label>
+                <?php if(isset($_SESSION["errores"]["email"])) {
+                    echo "<strong class='error'>". $_SESSION['errores']["email"]  ."</strong>";
+                } ?>
             </div>
-            <input type="email" name="email">
+            <input required type="email" name="email" placeholder="tucorreo@correo.es">
         </div>
 
         <div class="input-box">
             <div class="label-state">
                 <label>Teléfono</label>
+                <?php if(isset($_SESSION["errores"]["telefono"])) {
+                    echo "<strong class='error'>". $_SESSION['errores']["telefono"]  ."</strong>";
+                } ?>
             </div>
-            <input type="number" name="telefono">
+            <input required type="number" name="telefono" placeholder="666...">
         </div>
 
         <div class="input-box">
             <div class="label-state">
                 <label>Tarifa</label>
             </div>
-            <select>
-                <option>Primera</option>
-                <option>Segunda</option>
-                <option>Tercera</option>
-                <option>Cuarta</option>
-                <option>Quinta</option>
-                <option>Sexta</option>
+            <select name="id_tarifa">
+                <option selected></option>
+                <option value="1">1</option>
+                <option value="1">2</option>
+                <option value="1">3</option>
+                <option value="1">4</option>
+                <option value="1">5</option>
+                <option value="1">6</option>
             </select>
         </div>
 
@@ -82,9 +92,10 @@
             <div class="label-state">
                 <label>Descripción</label>
             </div>
-            <textarea name="descripcion" id="" cols="30" rows="10"></textarea>
+            <textarea required name="descripcion" id="" cols="30" rows="10" placeholder="Tu objetivo..."></textarea>
         </div>
 
         <button class="btn-primary">Enviar</button>
     </form>
+    <?php if(isset($_SESSION)) {unset($_SESSION["errores"]);} ?>
 </section>

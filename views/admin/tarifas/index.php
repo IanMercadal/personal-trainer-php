@@ -1,4 +1,4 @@
-<section class="contenedor">
+<section id="contenedor-tarifa" class="contenedor">
     <h2 class="text-center">Tarifas</h2>
 
     <a href="<?php echo base_url ?>tarifa/crear" class="btn-primary btn-create">Crear</a>

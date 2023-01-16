@@ -24,6 +24,8 @@ body {
     flex-direction: column;
     gap: 4rem;
     align-items: center;
+    justify-content: space-between;
+    height: 100vh;
 }
 
 h1 {
@@ -295,6 +297,9 @@ nav {
 .valor > img {
     margin-top: 1rem;
 }
+#contenedor-tarifa {
+    margin-bottom: auto;
+}
 /* NOSOTROS */
 .nosotros, .sobre-nosotros {
     display: grid;
@@ -420,6 +425,9 @@ nav {
 }
 
 /* LISTA USUARIOS */
+#contenedor-usuarios {
+    margin-bottom: auto;
+}
 .lista-admin {
     margin-top: 1.2rem;
     display: flex;
@@ -461,6 +469,9 @@ nav {
     gap: 1rem;
     width: 100%;
     justify-content: space-around;
+}
+.lista-solicitud > p {
+    align-self: flex-start;
 }
 /* FOOTER */
 .footer {
