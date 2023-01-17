@@ -42,10 +42,10 @@
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni architecto in deserunt. Atque adipisci voluptate commodi! Accusantium officia aperiam quia reprehenderit dicta necessitatibus, architecto et voluptas, magni suscipit at pariatur.
             Ullam error laborum ad esse perferendis quisquam. Obcaecati commodi in sequi perferendis ducimus. Sunt eos, alias odio veniam at velit corporis illo qui placeat magnam reiciendis a ex nisi ratione?</p>
             <div class="galeria">
-                <img width="120px" src="<?= base_url ?>assets/img/lift.jpg">
-                <img width="120px" src="<?= base_url ?>assets/img/rope.jpg">
-                <img width="120px" src="<?= base_url ?>assets/img/run.jpg">
-                <img width="120px" src="<?= base_url ?>assets/img/us.jpg">
+                <img onclick="overlary(this)" id="foto-galeria-1" width="120px" src="<?= base_url ?>assets/img/lift.jpg">
+                <img onclick="overlary(this)" id="foto-galeria-2" width="120px" src="<?= base_url ?>assets/img/dumbell.jpg">
+                <img onclick="overlary(this)" id="foto-galeria-3" width="120px" src="<?= base_url ?>assets/img/run.jpg">
+                <img onclick="overlary(this)" id="foto-galeria-4" width="120px" src="<?= base_url ?>assets/img/us.jpg">
             </div>
         </div>
     </div>
@@ -73,3 +73,5 @@
         </div>
     </div>
 </div>
+
+<script src="<?= base_url ?>assets/js/galeria.js"></script>

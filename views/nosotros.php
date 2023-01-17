@@ -2,11 +2,17 @@
     <h2 class="text-center">Nosotros</h2>
 
     <div class="sobre-nosotros">
-        <div>
+        <div class="sobre-nosotros-texto">
             <h3>¿Por qué nosotros?</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam repellendus nesciunt consectetur exercitationem. Atque deserunt ea culpa? Hic possimus voluptatum officiis error dicta temporibus nemo tempora numquam aut, veritatis porro.
                 Eum, at tenetur. Corrupti ipsa pariatur nisi saepe repellendus explicabo repellat error quibusdam, beatae, vel, autem odio tenetur veniam! Consequuntur delectus vitae, deserunt ipsam possimus cupiditate unde a eveniet suscipit.</p>
-        </div>
+            <h4>Nustro horario</h4>
+            <ul>
+                <li>Lunes a Viernes de 8:00 a 13:00 y de 15:00 a 20:00</li>
+                <li>Sábados de 8:00 a 14:00</li>
+                <li>Domingos y festivos cerrardos</li>
+            </ul>
+            </div>
         <img src="<?= base_url ?>assets/img/lift.jpg">
     </div>
 
