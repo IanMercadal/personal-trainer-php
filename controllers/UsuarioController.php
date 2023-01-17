@@ -185,5 +185,25 @@ class usuarioController {
             header("Location:" . base_url . "usuario/editar&id_usuario=" . $_GET["id_usuario"]);
         }
     }
+    public function eliminar() {
+        if(isset($_GET["id_usuario"])) {
+            $id = $_GET['id_usuario'];
+            $usuario = new Usuario($id);
+            $usuario->setIdUsuario($id);
+
+            $delete = $usuario->delete();
+
+            if($delete) {
+                header("Location:" . base_url . "page/query_state");
+                die();
+            } else {
+                $_SESSION['eliminar'] = "Error, no se ha podido eliminar el registro.";
+                header("Location:" . base_url . "usuario/list");
+                die();
+            }
+        } else {
+            $_SESSION['eliminar'] = "Error, no se ha podido eliminar el registro.";
+        }
+    }
 }
 ?>

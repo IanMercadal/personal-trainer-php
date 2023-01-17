@@ -153,6 +153,17 @@ class usuario {
         $usuario = $this->db->query("SELECT * FROM usuarios WHERE id_usuario = {$this->getIdUsuario()}");
         return $usuario->fetch_object();
     }
+
+    public function delete() {
+        $sql = "DELETE FROM usuarios where id_usuario = {$this->getIdUsuario()}";
+        $delete = $this->db->query($sql);
+
+        $result = false;
+        if($delete) {
+            $result = true;
+        }
+        return $result;
+    }
 }
 
 ?>

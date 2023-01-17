@@ -26,7 +26,7 @@
             <p><?php echo $usuario->telefono ?></p>
             <p>Tarifa <?php echo $usuario->id_tarifa ?></p>
             <a class="btn-editar" href="<?php base_url ?>editar&id_usuario=<?php echo $usuario->id_usuario?>">Editar</a>
-            <a class="btn-eliminar" href="#">Eliminar</a>
+            <a class="btn-eliminar" href="<?php base_url ?>eliminar&id_usuario=<?php echo $usuario->id_usuario?>">Eliminar</a>
         </div>
     <?php endwhile; ?>
     </div>
