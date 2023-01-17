@@ -3,6 +3,10 @@
 
     <form class="form-crear" method="post" action="<?php echo base_url;?>tarifa/save">
 
+        <?php if(isset($_SESSION["errores"]["registro"])) {
+            echo "<strong class='error'>". $_SESSION['errores']["registro"]  ."</strong>";
+        } ?>
+
         <div class="input-box">
             <div class="label-state">
                 <label>Nombre</label>
@@ -15,6 +19,17 @@
                 <label>Precio</label>
             </div>
             <input type="number" name="precio">
+        </div>
+        
+        <div class="input-box">
+            <div class="label-state">
+                <label>Tipo Tarifa</label>
+            </div>
+            <select name="categoria">
+                <option selected value=""></option>
+                <option value="plana">Plana</option>
+                <option value="mensual">Mensual</option>
+            </select>
         </div>
 
         <div class="input-box">

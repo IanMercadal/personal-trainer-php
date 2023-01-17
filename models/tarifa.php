@@ -5,6 +5,7 @@ class tarifa {
     private $nombre;
     private $precio;
     private $descripcion;
+    private $categoria;
     private $db;
 
     public function __construct() {
@@ -31,6 +32,12 @@ class tarifa {
         return $this->descripcion;
     }
 
+    
+    public function getCategoria()
+    {
+        return $this->categoria;
+    }
+
     public function setIdTarifa($id_tarifa): self
     {
         $this->id_tarifa = $id_tarifa;
@@ -55,14 +62,41 @@ class tarifa {
         return $this;
     }
 
+    
+    public function setCategoria($categoria): self
+    {
+        $this->categoria = $categoria;
+        return $this;
+    }
+
     public function save() {
-        $sql = "INSERT INTO tarifas VALUES(NULL, '{$this->getNombre()}', {$this->getPrecio()}, '{$this->getDescripcion()}');";
+        $sql = "INSERT INTO tarifas VALUES(NULL, '{$this->getNombre()}', {$this->getPrecio()}, '{$this->getDescripcion()}', '{$this->getCategoria()}');";
         $save = $this->db->query($sql);
 
-        var_dump($sql);
-        die();
         $result = false;
         if($save) {
+            $result = true;
+        }
+        return $result;
+    }
+
+    public function update() {
+        $sql = "UPDATE tarifas SET nombre='{$this->getNombre()}', precio={$this->getPrecio()}, descripcion='{$this->getDescripcion()}', categoria='{$this->getCategoria()}' WHERE id_tarifa={$this->getIdTarifa()}; ";
+        $save = $this->db->query($sql);
+
+        $result = false;
+        if($save) {
+            $result = true;
+        }
+        return $result;
+    }
+
+    public function delete() {
+        $sql = "DELETE FROM tarifas where id_tarifa = {$this->getIdTarifa()}";
+        $delete = $this->db->query($sql);
+
+        $result = false;
+        if($delete) {
             $result = true;
         }
         return $result;
@@ -72,6 +106,11 @@ class tarifa {
         $tarifas = $this->db->query("SELECT * FROM tarifas ORDER BY id_tarifa");
         return $tarifas;
     }
+    public function getOne() {
+        $tarifa = $this->db->query("SELECT * FROM tarifas WHERE id_tarifa = {$this->getIdTarifa()}");
+        return $tarifa->fetch_object();
+    }
+
 
 }
 
