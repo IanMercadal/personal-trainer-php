@@ -11,7 +11,7 @@
     <link rel="icon" type="image/ico" href="<?= base_url ?>assets/logo.svg">
 
     <link rel="stylesheet" href="<?=base_url?>assets/css/styles.css">
-    <title>Gym</title>
+    <title>GYM</title>
 </head>
 <body>
 
@@ -19,7 +19,7 @@
     <nav>
         <div class="div-logo">
             <img class="nav-logo" src="<?= base_url ?>assets/logo.svg">
-            <h3>Gym</h3>
+            <h3>GYM</h3>
         </div>
 
         <div class="options">

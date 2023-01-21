@@ -4,6 +4,7 @@ include_once "models/solicitud.php";
 
 class solicitudController {
     public function list() {
+        Utils::isAdmin();
         $solicitud = new solicitud();
         $solicitudes = $solicitud->getAll();
         require_once "views/solicitudes/index.php";

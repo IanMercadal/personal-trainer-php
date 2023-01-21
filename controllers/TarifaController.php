@@ -5,14 +5,17 @@ include_once "models/tarifa.php";
 
 class tarifaController {
     public function list() {
+        Utils::isAdmin();
         $tarifa = new Tarifa();
         $tarifas = $tarifa->getAll();
         require_once "views/admin/tarifas/index.php";
     }
     public function crear() {
+        Utils::isAdmin();
         require_once "views/admin/tarifas/crear.php";
     }
     public function editar() {
+        Utils::isAdmin();
         if(isset($_GET["id_tarifa"])) {
             $id = $_GET['id_tarifa'];
 
@@ -25,6 +28,7 @@ class tarifaController {
 
     // Métodos 
     public function save() {
+        Utils::isAdmin();
         if(isset($_POST)) {
             $nombre = isset($_POST['nombre']) ? $_POST['nombre'] : false;
             $precio = isset($_POST['precio']) ? $_POST['precio'] : false;
@@ -78,8 +82,8 @@ class tarifaController {
             }
         }
     }
-
     public function eliminar() {
+        Utils::isAdmin();
         if(isset($_GET["id_tarifa"])) {
             $id = $_GET['id_tarifa'];
             $tarifa = new Tarifa();

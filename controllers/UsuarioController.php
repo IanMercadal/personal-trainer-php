@@ -17,17 +17,30 @@ class usuarioController {
         require_once "views/user/index.php";
     }
     public function admin() {
+        Utils::isAdmin();
         require_once "views/admin/index.php";
     }
     public function list() {
+        Utils::isAdmin();
         $usuario = new usuario();
-        $usuarios = $usuario->getAll();
+
+        $filtros = [];
+        if(isset($_POST["campo-seleccionado"]) && isset($_POST["valor-seleccionado"]) ) {
+            $filtros[$_POST["campo-seleccionado"]] = $_POST["valor-seleccionado"];
+            if(isset($_POST["order"])) {
+                $filtros["order"] = $_POST["order"];
+            }
+        }
+
+        $usuarios = $usuario->getAll($filtros);
         require_once "views/admin/users/index.php";
     }
     public function crear() {
+        Utils::isAdmin();
         require_once "views/admin/users/crear.php";
     }
     public function editar() {
+        Utils::isAdmin();
         if(isset($_GET["id_usuario"])) {
             $id = $_GET['id_usuario'];
 
@@ -72,6 +85,7 @@ class usuarioController {
         }
     }
     public function save() {
+        Utils::isAdmin();
         if(isset($_POST)) {
 
             $errores = [];
@@ -131,6 +145,7 @@ class usuarioController {
         }
     }
     public function update() {
+        Utils::isAdmin();
         $errores = [];
 
         if(isset($_POST)) {
@@ -186,6 +201,7 @@ class usuarioController {
         }
     }
     public function eliminar() {
+        Utils::isAdmin();
         if(isset($_GET["id_usuario"])) {
             $id = $_GET['id_usuario'];
             $usuario = new Usuario($id);

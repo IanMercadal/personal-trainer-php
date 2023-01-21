@@ -144,7 +144,27 @@ class usuario {
         return $result;
     }
 
-    public function getAll() {
+    public function getAll($filtros) {
+        if(isset($filtros)) {
+            if(isset($filtros["id"])) {
+                $id = intval($filtros["id"]);
+                $usuarios = $this->db->query("SELECT * FROM usuarios where id_usuario =" . $id ." ORDER BY id_usuario");
+                return $usuarios;
+            } else if(isset($filtros["nombre"])) {
+                $usuarios = $this->db->query("SELECT * FROM usuarios where nombre ='" . $filtros["nombre"] ."' ORDER BY id_usuario");
+                return $usuarios;
+            } else if(isset($filtros["correo"])) {
+                $usuarios = $this->db->query("SELECT * FROM usuarios where email ='" . $filtros["correo"] ."' ORDER BY id_usuario");
+                return $usuarios;
+            } else if(isset($filtros["telefono"])) {
+                $id = intval($filtros["telefono"]);
+                $usuarios = $this->db->query("SELECT * FROM usuarios where telefono =" . $filtros["telefono"] ." ORDER BY id_usuario");
+                return $usuarios;
+            } else {
+                $usuarios = $this->db->query("SELECT * FROM usuarios where id_tarifa =" . $filtros["tarifa"] ." ORDER BY id_usuario");
+                return $usuarios;
+            }
+        }
         $usuarios = $this->db->query("SELECT * FROM usuarios ORDER BY id_usuario");
         return $usuarios;
     }

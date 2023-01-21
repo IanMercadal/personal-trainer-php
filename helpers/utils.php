@@ -1,6 +1,13 @@
 <?php 
 
 class utils {
+    public static function isAdmin() {
+        if($_SESSION["identidad"]->email != "admin@admin.es") {
+            header("Location:" . base_url);
+            die();
+        }
+        
+    }
     public static function validarPassword($password) {
         $errores = [];
         if(strlen($password) >= 12) {
