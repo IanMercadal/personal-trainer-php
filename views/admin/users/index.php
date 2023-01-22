@@ -16,12 +16,12 @@
 
             <div class="radio-group">
                 <label>ASC</label>
-                <input name="order" type="radio"></input>
+                <input name="order" value="asc" type="radio"></input>
             </div>
 
             <div class="radio-group">
                 <label>DES</label>
-                <input name="order" type="radio"></input>
+                <input name="order" value="desc" type="radio"></input>
             </div>
             
             <button class="btn-primary">Buscar</button>

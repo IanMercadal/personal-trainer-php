@@ -25,7 +25,7 @@ class usuarioController {
         $usuario = new usuario();
 
         $filtros = [];
-        if(isset($_POST["campo-seleccionado"]) && isset($_POST["valor-seleccionado"]) ) {
+        if(isset($_POST["campo-seleccionado"]) && isset($_POST["valor-seleccionado"]) || isset($_POST["order"]) ) {
             $filtros[$_POST["campo-seleccionado"]] = $_POST["valor-seleccionado"];
             if(isset($_POST["order"])) {
                 $filtros["order"] = $_POST["order"];
