@@ -63,8 +63,7 @@
             </div>
             <div class="vector-derecho">
                 <div class="banner-info">
-                    <h3>Tu entrenamiento más completo</h3>
-                    <img width="50%" src="<?= base_url ?>assets/img/logo-grande.png">
+                    <img  src="<?= base_url ?>assets/img/logo-grande.png">
                 </div>
             </div>
         </div>
