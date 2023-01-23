@@ -226,7 +226,7 @@ nav {
     gap: 1rem;
 }
 .nav-logo {
-    width: 50px;
+    width: 60px;
 }
 .nav-link {
     font-size: 1.4rem;
@@ -261,13 +261,63 @@ nav {
 }
 /* BANNER */
 .banner {
-    background-image: url(../img/run.jpg);
+    /* background-image: url(../img/run.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    filter: grayscale(80%);
-    height: 500px;
+    /* filter: grayscale(80%); 
+    */
+    display: grid;
+    grid-template-columns: 45% 55%;
+    height: 600px;
+    width: 100%; 
+    text-transform: uppercase;
+}
+.banner-logo {
+    width: 300px;
+}
+.banner-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.vector-derecho {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
     width: 100%;
+}
+.vector {
+    height: 50%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.vector > * {
+    margin: 0 0 0 2rem;
+}
+.vector-derecho > * {
+    margin-right: 2rem;
+}
+.vector-izquierdo {
+    clip-path: polygon(0 0, 65% 0, 100% 100%, 0% 100%);
+    width: 100%;
+    font-style: italic;
+}
+#vector-izquierdo-superior {
+    background-color: rgba(0, 0, 0, 0.923);
+}
+#vector-izquierdo-inferior {
+    background-color: var(--wildcard-green-color);
+}
+.vector-izquierdo svg {
+    max-width: 100px;
 }
 
 /* COMPONENTES */
@@ -655,5 +705,13 @@ nav {
     .programas, .tres-columnas  {
         display: flex;
         flex-direction: column;
+    }
+    .banner {
+        grid-template-columns: none;
+        display: flex;
+        flex-direction: column;
+    }
+    .vector-izquierdo {
+        clip-path: none;
     }
 }

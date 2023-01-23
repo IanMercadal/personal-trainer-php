@@ -1,7 +1,6 @@
 <footer class="footer">
     <div class="div-logo">
-        <img class="nav-logo" src="<?= base_url ?>assets/logo.svg">
-        <h3>Gym</h3>
+        <img class="nav-logo" src="<?= base_url ?>assets/img/logo-mini.png">
     </div>
 
     <div class="options">
