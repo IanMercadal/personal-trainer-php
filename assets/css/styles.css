@@ -172,6 +172,35 @@ textarea {
     flex-direction: row;
     align-items: center;
 }
+.active {
+    text-decoration: underline;
+    text-decoration-line: 2px;
+}
+
+.dos-columnas {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.columna {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--wildcard-green-color);
+    border-radius: 1rem;
+    width: 100%;
+}
+.check-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
 /* NAVIGATION */
 
 header {
@@ -606,7 +635,7 @@ nav {
         grid-template-columns: none;
         grid-template-rows: repeat(2,1fr);
     }
-    .tarifas {
+    .tarifas, .dos-columnas {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;

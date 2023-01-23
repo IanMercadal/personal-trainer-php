@@ -41,67 +41,77 @@
 
 <section class="contenedor">
     <h2 id="contacta-nosotros">Conctacta con nosotros</h2>
-    <?php if(isset($_SESSION["errores"]["solicitud"])) {
-        echo "<strong class='error'>". $_SESSION['errores']["solicitud"]  ."</strong>";
-    } ?>
-    <form id="form-contacto" method="POST" action="<?php echo base_url?>solicitud/solicitar">
-        <div class="input-box">
-            <div class="label-state">
-                <label>Nombre</label>
-            </div>
-            <input required type="text" name="nombre" placeholder="Nombre">
-        </div>
 
-        <div class="input-box">
-            <div class="label-state">
-                <label>Apellido</label>
+    <?php if(!isset($_SESSION["exito"])) :?>
+        <?php if(isset($_SESSION["errores"]["solicitud"])) {
+            echo "<strong class='error'>". $_SESSION['errores']["solicitud"]  ."</strong>";
+        } ?>
+        <form id="form-contacto" method="POST" action="<?php echo base_url?>solicitud/solicitar">
+            <div class="input-box">
+                <div class="label-state">
+                    <label>Nombre</label>
+                </div>
+                <input required type="text" name="nombre" placeholder="Nombre">
             </div>
-            <input required type="text" name="apellido" placeholder="Apellido">
-        </div>
 
-        <div class="input-box">
-            <div class="label-state">
-                <label>Email</label>
-                <?php if(isset($_SESSION["errores"]["email"])) {
-                    echo "<strong class='error'>". $_SESSION['errores']["email"]  ."</strong>";
-                } ?>
+            <div class="input-box">
+                <div class="label-state">
+                    <label>Apellido</label>
+                </div>
+                <input required type="text" name="apellido" placeholder="Apellido">
             </div>
-            <input required type="email" name="email" placeholder="tucorreo@correo.es">
-        </div>
 
-        <div class="input-box">
-            <div class="label-state">
-                <label>Teléfono</label>
-                <?php if(isset($_SESSION["errores"]["telefono"])) {
-                    echo "<strong class='error'>". $_SESSION['errores']["telefono"]  ."</strong>";
-                } ?>
+            <div class="input-box">
+                <div class="label-state">
+                    <label>Email</label>
+                    <?php if(isset($_SESSION["errores"]["email"])) {
+                        echo "<strong class='error'>". $_SESSION['errores']["email"]  ."</strong>";
+                    } ?>
+                </div>
+                <input required type="email" name="email" placeholder="tucorreo@correo.es">
             </div>
-            <input required type="number" name="telefono" placeholder="666...">
-        </div>
 
-        <div class="input-box">
-            <div class="label-state">
-                <label>Tarifa</label>
+            <div class="input-box">
+                <div class="label-state">
+                    <label>Teléfono</label>
+                    <?php if(isset($_SESSION["errores"]["telefono"])) {
+                        echo "<strong class='error'>". $_SESSION['errores']["telefono"]  ."</strong>";
+                    } ?>
+                </div>
+                <input required type="number" name="telefono" placeholder="666...">
             </div>
-            <select name="id_tarifa">
-                <option selected></option>
-                <option value="1">1</option>
-                <option value="1">2</option>
-                <option value="1">3</option>
-                <option value="1">4</option>
-                <option value="1">5</option>
-                <option value="1">6</option>
-            </select>
-        </div>
 
-        <div class="input-box">
-            <div class="label-state">
-                <label>Descripción</label>
+            <div class="input-box">
+                <div class="label-state">
+                    <label>Tarifa</label>
+                </div>
+                <select name="id_tarifa">
+                    <option selected></option>
+                    <?php while($tarifa = $tarifas->fetch_object()) :?>
+                    <option value="<?php echo $tarifa->id_tarifa?>"><?php echo $tarifa->nombre?></option>
+                    <?php endwhile ;?>
+                </select>
             </div>
-            <textarea required name="descripcion" id="" cols="30" rows="10" placeholder="Tu objetivo..."></textarea>
-        </div>
 
-        <button class="btn-primary">Enviar</button>
-    </form>
-    <?php if(isset($_SESSION)) {unset($_SESSION["errores"]);} ?>
+            <div class="input-box">
+                <div class="label-state">
+                    <label>Descripción</label>
+                </div>
+                <textarea required name="descripcion" id="" cols="30" rows="10" placeholder="Tu objetivo..."></textarea>
+            </div>
+
+            <button class="btn-primary">Enviar</button>
+        </form>
+        <?php if(isset($_SESSION)) {unset($_SESSION["errores"]);} ?>
+    <?php else :  ?>
+        <div class="query-state">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-check" width="72" height="72" viewBox="0 0 24 24" stroke-width="1.5" stroke="#399F2E" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <circle cx="12" cy="12" r="9" />
+                <path d="M9 12l2 2l4 -4" />
+            </svg>
+        
+            <h3>Se ha enviado la solicitud correctamente</h3>
+        </div>
+    <?php endif ?>
 </section>

@@ -23,9 +23,9 @@
         </div>
 
         <div class="options">
-            <a class="nav-link" href="<?php echo base_url?>">Inicio</a>
-            <a class="nav-link" href="<?php echo base_url?>page/tarifa">Tarifas</a>
-            <a class="nav-link" href="<?php echo base_url?>page/nosotros">Nosotros</a>
+            <a <?php if ($_SERVER['REQUEST_URI'] == "/") { ?> class="active nav-link" <?php } ?> class="nav-link" href="<?php echo base_url?>">Inicio</a>
+            <a <?php if ($_SERVER['REQUEST_URI'] == "/page/tarifa") { ?> class="active nav-link" <?php } ?> class="nav-link" href="<?php echo base_url?>page/tarifa">Tarifas</a>
+            <a <?php if ($_SERVER['REQUEST_URI'] == "/page/nosotros") { ?> class="active nav-link" <?php } ?> class="nav-link" href="<?php echo base_url?>page/nosotros">Nosotros</a>
         </div>
 
         <div class="user-state-header">

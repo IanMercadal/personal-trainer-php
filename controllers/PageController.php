@@ -30,6 +30,8 @@ class pageController {
     }
     public function nosotros() {
         // Renderizar Vista
+        $tarifa = new Tarifa();
+        $tarifas = $tarifa->getAll();
         require_once "views/nosotros.php";
     }
     public function query_state() {

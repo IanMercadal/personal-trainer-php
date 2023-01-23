@@ -42,18 +42,33 @@ class solicitudController {
                 $save = $solicitud->save();
 
                 if($save){
-                    header("Location:" . base_url . "page/query_state");
+                    header("Location:" . base_url . "page/nosotros");
+                    $_SESSION["exito"] = "exito";
                     die();
                 }else {
                     $errores['solicitud'] = "La solicitud ha fallado, inténtalo de nuevo";
                 }
             } else {
                 $errores['solicitud'] = "Error, completa todos los campos";
-                $_SESSION["errores"] = $errores;
-                header("Location:" . base_url . "page/nosotros");
+            }
+            $_SESSION["errores"] = $errores;
+            header("Location:" . base_url . "page/nosotros");
+        }
+    }
+    public function gestionar() {
+        if(isset($_POST)) {
+            $solicitud = new solicitud();
+            $solicitud->setIdSolicitud($_POST["id_solicitud"]);
+
+            $update = $solicitud->update();
+            if($update) {
+                header("Location:" . base_url . "page/query_state");
+                die();
+            } else {
+                $_SESSION['solicitud'] = "La gestión de solicitud ha fallado, inténtalo de nuevo";
+                header("Location:" . base_url . "solicitud/list");
             }
         }
     }
-
 }
 ?>

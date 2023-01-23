@@ -101,7 +101,7 @@ class solicitud {
     }
 
     public function save() {
-        $sql = "INSERT INTO solicitudes VALUES(NULL, '{$this->getNombre()}', '{$this->getApellido()}', '{$this->getEmail()}', '{$this->getTelefono()}', '{$this->getDescripcion()}', CURDATE() , '{$this->getIdTarifa()}');";
+        $sql = "INSERT INTO solicitudes VALUES(NULL, '{$this->getNombre()}', '{$this->getApellido()}', '{$this->getEmail()}', {$this->getTelefono()}, '{$this->getDescripcion()}', CURDATE() , 0, {$this->getIdTarifa()});";
         $save = $this->db->query($sql);
 
         $result = false;
@@ -111,11 +111,23 @@ class solicitud {
         return $result;
     }
 
-    public function getAll() {
-        $solicitudes = $this->db->query("SELECT * FROM solicitudes ORDER BY id_solicitud");
-        return $solicitudes;
+    public function update() {
+        $sql = "UPDATE solicitudes SET estado_gestion=1 WHERE id_solicitud={$this->getIdSolicitud()}; ";
+        $save = $this->db->query($sql);
+
+        var_dump($sql);
+        var_dump($save);
+        die();
+        $result = false;
+        if($save) {
+            $result = true;
+        }
+        return $result;
     }
 
-
+    public function getAll() {
+        $solicitudes = $this->db->query("SELECT * FROM solicitudes ORDER BY estado_gestion, id_solicitud ASC");
+        return $solicitudes;
+    }
 }
 ?>
