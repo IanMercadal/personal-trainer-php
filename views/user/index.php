@@ -34,7 +34,7 @@
                     <circle cx="14" cy="14" r="2" />
                     <path d="M17 9v-2a2 2 0 0 0 -2 -2h-10a2 2 0 0 0 -2 2v6a2 2 0 0 0 2 2h2" />
                 </svg>
-                <p><b>Tarifa: </b><?php echo $_SESSION["identidad"]->id_tarifa ?></p>
+                <p><b>Tarifa: </b><?php echo $tarifa_user->nombre ?></p>
             </div>
 
             <div class="user-info-emoji">

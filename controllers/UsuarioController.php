@@ -2,6 +2,7 @@
 
 require_once "helpers/utils.php";
 require_once "models/usuario.php";
+require_once "models/tarifa.php";
 
 class usuarioController {
     public function login() {
@@ -14,6 +15,10 @@ class usuarioController {
         header("Location:" . base_url);
     }
     public function perfil() {
+
+        $tarifa = new Tarifa();
+        $tarifa_user = $tarifa->getUserTarifa($_SESSION["identidad"]->id_tarifa);
+
         require_once "views/user/index.php";
     }
     public function admin() {

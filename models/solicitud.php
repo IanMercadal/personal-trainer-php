@@ -129,5 +129,9 @@ class solicitud {
         $solicitudes = $this->db->query("SELECT * FROM solicitudes ORDER BY estado_gestion, id_solicitud ASC");
         return $solicitudes;
     }
+    public function getOne() {
+        $solicitudes = $this->db->query("SELECT * FROM solicitudes ORDER BY estado_gestion, id_solicitud ASC");
+        return $solicitudes;
+    }
 }
 ?>

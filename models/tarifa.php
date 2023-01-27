@@ -110,6 +110,11 @@ class tarifa {
         $tarifa = $this->db->query("SELECT * FROM tarifas WHERE id_tarifa = {$this->getIdTarifa()}");
         return $tarifa->fetch_object();
     }
+    public function getUserTarifa($id_tarifa) {
+        $id = intval($id_tarifa);
+        $tarifa = $this->db->query("SELECT * FROM tarifas WHERE id_tarifa = $id");
+        return $tarifa->fetch_object();
+    }
 
 
 }
