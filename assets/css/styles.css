@@ -601,6 +601,7 @@ nav {
     align-items: center;
     justify-content: space-around;
     border-radius: 1rem;
+    color: #000;
 }
 .lista-solicitud-info {
     display: flex;
