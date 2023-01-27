@@ -11,36 +11,38 @@
                     <div class="precio-contenedor">
                         <h4 class="tarifa-titulo"><?php echo $tarifas_planas[$i]->nombre . " / <b>". $tarifas_planas[$i]->precio . "$</b>"?></h4>
                     </div>
-                    <div class="check-list">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#399F2E" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <path d="M5 12l5 5l10 -10" />
-                        </svg>
-                        <p><b>Lorem:</b> Ipsum</p>
+                    <div class="check-list-parent">
+                        <div class="check-list">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#399F2E" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M5 12l5 5l10 -10" />
+                            </svg>
+                            <p><b>Lorem:</b> Ipsum</p>
+                        </div>
+                        <div class="check-list">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#399F2E" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M5 12l5 5l10 -10" />
+                            </svg>
+                            <p><b>Lorem:</b> Ipsum</p>
+                        </div>
+                        <div class="check-list">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#399F2E" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M5 12l5 5l10 -10" />
+                            </svg>
+                            <p><b>Lorem:</b> Ipsum</p>
+                        </div>
+                        <div class="check-list">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff2825" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <line x1="18" y1="6" x2="6" y2="18" />
+                                <line x1="6" y1="6" x2="18" y2="18" />
+                            </svg>
+                            <p><b>Lorem:</b> Ipsum</p>
+                        </div>
+                        <a href="<?php echo base_url ?>page/nosotros#contacta-nosotros" class="btn-primary">Apuntarse</a>
                     </div>
-                    <div class="check-list">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#399F2E" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <path d="M5 12l5 5l10 -10" />
-                        </svg>
-                        <p><b>Lorem:</b> Ipsum</p>
-                    </div>
-                    <div class="check-list">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#399F2E" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <path d="M5 12l5 5l10 -10" />
-                        </svg>
-                        <p><b>Lorem:</b> Ipsum</p>
-                    </div>
-                    <div class="check-list">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff2825" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <line x1="18" y1="6" x2="6" y2="18" />
-                            <line x1="6" y1="6" x2="18" y2="18" />
-                        </svg>
-                        <p><b>Lorem:</b> Ipsum</p>
-                    </div>
-                    <a href="<?php echo base_url ?>page/nosotros#contacta-nosotros" class="btn-primary">Apuntarse</a>
                 </div>
                 <?php $i += 1?>
                 <?php endwhile; ?>
@@ -55,36 +57,38 @@
                     <div class="precio-contenedor">
                         <h4 class="tarifa-titulo"><?php echo $tarifas_mensuales[$i]->nombre . " / <b>" . $tarifas_mensuales[$i]->precio . "$</b>"?></h4>
                     </div>
-                    <div class="check-list">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#399F2E" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <path d="M5 12l5 5l10 -10" />
-                        </svg>
-                        <p><b>Lorem:</b> Ipsum</p>
+                    <div class="check-list-parent">
+                        <div class="check-list">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#399F2E" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M5 12l5 5l10 -10" />
+                            </svg>
+                            <p><b>Lorem:</b> Ipsum</p>
+                        </div>
+                        <div class="check-list">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#399F2E" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M5 12l5 5l10 -10" />
+                            </svg>
+                            <p><b>Lorem:</b> Ipsum</p>
+                        </div>
+                        <div class="check-list">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#399F2E" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M5 12l5 5l10 -10" />
+                            </svg>
+                            <p><b>Lorem:</b> Ipsum</p>
+                        </div>
+                        <div class="check-list">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff2825" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <line x1="18" y1="6" x2="6" y2="18" />
+                                <line x1="6" y1="6" x2="18" y2="18" />
+                            </svg>
+                            <p><b>Lorem:</b> Ipsum</p>
+                        </div>
+                        <a href="<?php echo base_url ?>page/nosotros#contacta-nosotros" class="btn-primary">Apuntarse</a>
                     </div>
-                    <div class="check-list">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#399F2E" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <path d="M5 12l5 5l10 -10" />
-                        </svg>
-                        <p><b>Lorem:</b> Ipsum</p>
-                    </div>
-                    <div class="check-list">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#399F2E" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <path d="M5 12l5 5l10 -10" />
-                        </svg>
-                        <p><b>Lorem:</b> Ipsum</p>
-                    </div>
-                    <div class="check-list">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff2825" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <line x1="18" y1="6" x2="6" y2="18" />
-                            <line x1="6" y1="6" x2="18" y2="18" />
-                        </svg>
-                        <p><b>Lorem:</b> Ipsum</p>
-                    </div>
-                    <a href="<?php echo base_url ?>page/nosotros#contacta-nosotros" class="btn-primary">Apuntarse</a>
                 </div>
                 <?php $i += 1?>
                 <?php endwhile; ?>

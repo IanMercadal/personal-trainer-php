@@ -1,9 +1,7 @@
 <section class="contenedor">
-    <h2 class="text-center">Nosotros</h2>
-
     <div class="sobre-nosotros">
         <div class="sobre-nosotros-texto">
-            <h3>¿Por qué nosotros?</h3>
+            <h2>¿Por qué nosotros?</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam repellendus nesciunt consectetur exercitationem. Atque deserunt ea culpa? Hic possimus voluptatum officiis error dicta temporibus nemo tempora numquam aut, veritatis porro.
                 Eum, at tenetur. Corrupti ipsa pariatur nisi saepe repellendus explicabo repellat error quibusdam, beatae, vel, autem odio tenetur veniam! Consequuntur delectus vitae, deserunt ipsam possimus cupiditate unde a eveniet suscipit.</p>
             <h4>Nustro horario</h4>

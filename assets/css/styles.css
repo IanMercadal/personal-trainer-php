@@ -26,6 +26,8 @@ body {
     align-items: center;
     justify-content: space-between;
     height: 100vh;
+    background-color: #373737;
+    color: white;
 }
 
 h1 {
@@ -148,7 +150,8 @@ label {
 input, select {
     font-size: 1.4rem;
     height: 30px;
-    border: none;border-bottom: 1px solid var(--wildcard-green-color);
+    border: none;
+    border-bottom: 1px solid var(--wildcard-green-color);
 }
 textarea {
     resize: none;
@@ -166,6 +169,7 @@ textarea {
     justify-content: space-around;
     border-radius: 1rem;
     margin: 1rem 0 1rem 0;
+    color: #000;
 }
 .radio-group {
     display: flex;
@@ -191,16 +195,24 @@ textarea {
     align-items: center;
     justify-content: center;
     border: 2px solid var(--wildcard-green-color);
-    border-radius: 1rem;
     width: 100%;
 }
-.check-list {
+.check-list   {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
-
+.check-list-parent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 1rem;
+}
+.check-list-parent {
+    width: 100%;
+}
 /* NAVIGATION */
 
 header {
@@ -238,6 +250,7 @@ nav {
     background-color: #fff;
     color: var(--wildcard-green-color);
     transition: all ease-in 0.2s;
+    color: var(--wildcard-green-color);
 }
 .login {
     font-size: 1.4rem;
@@ -327,16 +340,18 @@ nav {
     grid-template-columns: repeat(4,1fr);
     align-items: center;
     gap: 1rem;
+    color: #000;
 }
 .programa {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     background-color: var(--light-secondary-color);
+    height: 400px;
 }
 .programa:hover {
     background-color: var(--wildcard-green-color);
-    opacity: 80%;
     color: #eee;
     transform: scale(1.05);
     transition: ease-in-out 0.2s;
@@ -353,13 +368,15 @@ nav {
 .precio-contenedor {
     width: 100%;
     height: 50px;
-    background-color: var(--wildcard-green-color);
+    background-color: var(--primary-color);
     color: white;
     text-align: center;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    /* -webkit-clip-path: polygon(0 0, 86% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 86% 0, 100% 100%, 0 100%); */
 }
 .tarifa-titulo {
     margin-top: auto;
@@ -377,21 +394,15 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--secondary-color);
     opacity: 80%;
     color: #000;
+    border: 4px solid var(--primary-color);
+    background-color: white;
 }
 .tarifa a {
     margin-bottom: 1rem;
+    align-self: center;
 }
-/* .tarifa:hover {
-    /* background-color: var(--wildcard-gray-color);
-    background-color: var(--wildcard-green-color);
-    transform: scale(1.05);
-    transition: ease-in-out 0.2s;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    color: #eee;
-} */
 .tarifa .circle {
     background-color: #fff;
 }
@@ -401,7 +412,6 @@ nav {
     align-items: center;
     justify-content: center;
     border: 2px solid var(--wildcard-green-color);
-    border-radius: 1rem;
 }
 .valor > img {
     margin-top: 1rem;
@@ -462,11 +472,12 @@ nav {
     gap: 1rem;
     background-color: var(--light-secondary-color);
     padding: 1rem;
+    color: #000;
 }
 .testimonial:hover {
     background-color: var(--wildcard-green-color);
     opacity: 80%;
-    color: #eee;
+    color: #fff;
     transform: scale(1.05);
     transition: ease-in-out 0.2s;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -516,7 +527,6 @@ nav {
     color: #fff;
     margin-left: auto;
     margin-right: auto;
-    color: #000;
 }
 
 /* PERFIL */
@@ -551,7 +561,6 @@ nav {
     display: grid;
     grid-template-rows: repeat(2,1fr);
     gap: 2rem;
-
 }
 
 /* LISTA USUARIOS */
@@ -569,7 +578,7 @@ nav {
     transform: scale(1.02);
     transition: all ease-in 0.2s;
     background-color: var(--primary-color);
-    color: #fff;
+    
 }
 .lista-usuario {
     display: flex;
@@ -580,6 +589,7 @@ nav {
     align-items: center;
     justify-content: space-around;
     border-radius: 1rem;
+    color: #000;
 }
 /* SOLICITUD */
 .lista-solicitud {
@@ -609,8 +619,14 @@ nav {
     grid-template-rows: repeat(3,1fr);
     justify-items: center;
     align-items: center;
-    background-color: var(--light-secondary-color);
+    background-color: #373737;
     width: 100%;
+}
+.footer .options .nav-link {
+    color: white;
+}
+.footer .options .nav-link:hover {
+    color: var(--wildcard-green-color);
 }
 .icons {
     display: flex;
@@ -686,6 +702,9 @@ nav {
     #perfil-usuario-panel {
         grid-template-columns: none;
         grid-template-rows: repeat(2,1fr);
+    }
+    .banner-info img {
+        width: 80%;
     }
 }
 
