@@ -114,7 +114,7 @@ class usuario {
         return $result;
     }
     public function update() {
-        $sql = "UPDATE usuarios SET nombre='{$this->getNombre()}', apellido='{$this->getApellido()}', email='{$this->getEmail()}', telefono={$this->getTelefono()} WHERE id_usuario={$this->getIdUsuario()}; ";
+        $sql = "UPDATE usuarios SET nombre='{$this->getNombre()}', apellido='{$this->getApellido()}', email='{$this->getEmail()}', telefono={$this->getTelefono()}, id_tarifa={$this->getIdTarifa()} WHERE id_usuario={$this->getIdUsuario()}; ";
         $save = $this->db->query($sql);
 
         $result = false;

@@ -189,6 +189,7 @@ class usuarioController {
                 $usuario->setApellido($apellido);
                 $usuario->setEmail($email);
                 $usuario->setTelefono($telefono);
+                $usuario->setIdTarifa($tarifa);
 
                 $update = $usuario->update();
                 if($update) {

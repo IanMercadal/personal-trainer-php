@@ -55,13 +55,19 @@
                             } ?> value="1">1</option>
                     <option <?php if ($usuario->id_tarifa == 2) {
                                 echo "selected";
-                            } ?> value="1">2</option>
+                            } ?> value="2">2</option>
                     <option <?php if ($usuario->id_tarifa == 3) {
                                 echo "selected";
-                            } ?> value="1">3</option>
+                            } ?> value="3">3</option>
                     <option <?php if ($usuario->id_tarifa == 4) {
                                 echo "selected";
-                            } ?> value="1">4</option>
+                            } ?> value="4">4</option>
+                    <option <?php if ($usuario->id_tarifa == 5) {
+                                echo "selected";
+                            } ?> value="5">5</option>
+                    <option <?php if ($usuario->id_tarifa == 6) {
+                                echo "selected";
+                            } ?> value="6">6</option>
                 </select>
             </div>
 
