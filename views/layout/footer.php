@@ -4,9 +4,9 @@
     </div>
 
     <div class="options">
-        <a class="nav-link" href="#">Inicio</a>
-        <a class="nav-link" href="#">Tarifas</a>
-        <a class="nav-link" href="#">Nosotros</a>
+        <a class="nav-link" href="<?php echo base_url?>">Inicio</a>
+        <a class="nav-link" href="<?php echo base_url?>page/tarifa">Tarifas</a>
+        <a class="nav-link" href="<?php echo base_url?>page/nosotros">Nosotros</a>
     </div>
 
     <div class="icons">

@@ -1,33 +1,33 @@
 <!-- PROGRAMAS -->
 <div class="contenedor">
-    <h2 class="text-center">Programas</h2>
+    <h2>Nuestros <span>Programas</span></h2>
 
     <div class="programas">
         <div class="programa">
             <h4 class="programa-titulo">Body Building</h4>
-            <div class="circle">
-                <img class="nav-logo" src="<?= base_url ?>assets/logo.svg">
+            <div class="circle programa-icono">
+                <img src="<?= base_url ?>assets/logo.svg">
             </div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus neque dolorem minima deleniti voluptate. Rerum exercitationem, et illum, quis eaque ipsam aliquam cum amet atque, id voluptas dolorem ipsum pariatur.</p>
         </div>
         <div class="programa">
             <h4 class="programa-titulo">Fat Burn</h4>
-            <div class="circle">
-                <img class="nav-logo" src="<?= base_url ?>assets/burn.svg">
+            <div class="circle programa-icono">
+                <img src="<?= base_url ?>assets/burn.svg">
             </div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus neque dolorem minima deleniti voluptate. Rerum exercitationem, et illum, quis eaque ipsam aliquam cum amet atque, id voluptas dolorem ipsum pariatur.</p>
         </div>
         <div class="programa">
             <h4 class="programa-titulo">Improve Speed</h4>
-            <div class="circle">
-                <img class="nav-logo" src="<?= base_url ?>assets/speed.svg">
+            <div class="circle programa-icono">
+                <img src="<?= base_url ?>assets/speed.svg">
             </div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus neque dolorem minima deleniti voluptate. Rerum exercitationem, et illum, quis eaque ipsam aliquam cum amet atque, id voluptas dolorem ipsum pariatur.</p>
         </div>
         <div class="programa">
             <h4 class="programa-titulo">Diet Calendar</h4>
-            <div class="circle">
-                <img class="nav-logo" src="<?= base_url ?>assets/diet.svg">
+            <div class="circle programa-icono">
+                <img src="<?= base_url ?>assets/diet.svg">
             </div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus neque dolorem minima deleniti voluptate. Rerum exercitationem, et illum, quis eaque ipsam aliquam cum amet atque, id voluptas dolorem ipsum pariatur.</p>
         </div>
@@ -36,18 +36,18 @@
 
 <!-- NOSOTROS -->
 <div class="contenedor">
-    <h2 class="text-center">Nosotros</h2>
+    <h2>Sobre <span>Nosotros</span></h2>
 
     <div class="nosotros">
-        <img class="nosotros-imagen" src="<?= base_url ?>assets/img/rope.jpg">
+        <img class="nosotros-imagen" src="<?= base_url ?>assets/img/nosotros.png">
         <div class="nosotros-info">
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni architecto in deserunt. Atque adipisci voluptate commodi! Accusantium officia aperiam quia reprehenderit dicta necessitatibus, architecto et voluptas, magni suscipit at pariatur.
             Ullam error laborum ad esse perferendis quisquam. Obcaecati commodi in sequi perferendis ducimus. Sunt eos, alias odio veniam at velit corporis illo qui placeat magnam reiciendis a ex nisi ratione?</p>
             <div class="galeria">
-                <img onclick="overlary(this)" id="foto-galeria-1" width="120px" src="<?= base_url ?>assets/img/lift.jpg">
-                <img onclick="overlary(this)" id="foto-galeria-2" width="120px" src="<?= base_url ?>assets/img/dumbell.jpg">
-                <img onclick="overlary(this)" id="foto-galeria-3" width="120px" src="<?= base_url ?>assets/img/run.jpg">
-                <img onclick="overlary(this)" id="foto-galeria-4" width="120px" src="<?= base_url ?>assets/img/us.jpg">
+                <img onclick="overlary(event)" id="foto-galeria-1" width="150px" src="<?= base_url ?>assets/img/foto-galeria-1.jpg">
+                <img onclick="overlary(event)" id="foto-galeria-2" width="150px" src="<?= base_url ?>assets/img/foto-galeria-2.jpg">
+                <img onclick="overlary(event)" id="foto-galeria-3" width="150px" src="<?= base_url ?>assets/img/foto-galeria-3.jpg">
+                <img onclick="overlary(event)" id="foto-galeria-4" width="150px" src="<?= base_url ?>assets/img/foto-galeria-4.jpg">
             </div>
         </div>
     </div>
@@ -55,7 +55,7 @@
 
 <!-- TARIFAS -->
 <div class="contenedor">
-    <h2 class="text-center">Tarifas</h2>
+    <h2>Nuestras <span>Tarifas</span></h2>
 
     <div class="dos-columnas">
         <div class="columna">
@@ -170,7 +170,7 @@
 
 <!-- TESTIMONIALES -->
 <div class="contenedor">
-    <h2 class="text-center">Testimoniales</h2>
+    <h2>Testimoniales</h2>
 
     <h4 id="testimoniales-frase">¿Qué dicen nuestros clientes?</h4>
     <div id="testimoniales" class="tres-columnas">

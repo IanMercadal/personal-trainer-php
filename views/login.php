@@ -3,9 +3,6 @@
     
     <div class="login-columnas">
         <div class="left-column-login">
-            <div class="circle">
-                <img class="nav-logo" src="<?= base_url ?>assets/logo.svg">
-            </div>
             <h2>Welcome Back!</h2>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem necessitatibus nulla eaque amet corporis impedit, enim sequi cumque nemo facere soluta debitis? Sequi veniam officiis cum, distinctio praesentium eius officia!</p>
         </div>

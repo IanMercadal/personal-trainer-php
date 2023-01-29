@@ -20,17 +20,17 @@
     <h2 class="text-center">Objetivos</h2>
     <div id="valores" class="tres-columnas">
         <div class="valor">
-            <img class="nav-logo" src="<?= base_url ?>assets/goals.svg">
+            <img src="<?= base_url ?>assets/goals.svg">
             <h3>Metas</h3>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero eligendi recusandae tempora sequi aut aperiam inventore dolorem laborum cupiditate. Error quaerat animi excepturi quis nobis ad tempora magnam saepe voluptas.</p>
         </div>
         <div class="valor">
-            <img class="nav-logo" src="<?= base_url ?>assets/diversion.svg">
+            <img src="<?= base_url ?>assets/diversion.svg">
             <h3>Diversión</h3>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero eligendi recusandae tempora sequi aut aperiam inventore dolorem laborum cupiditate. Error quaerat animi excepturi quis nobis ad tempora magnam saepe voluptas.</p>
         </div>
         <div class="valor">
-            <img class="nav-logo" src="<?= base_url ?>assets/discipline.svg">
+            <img src="<?= base_url ?>assets/discipline.svg">
             <h3>Disciplina</h3>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero eligendi recusandae tempora sequi aut aperiam inventore dolorem laborum cupiditate. Error quaerat animi excepturi quis nobis ad tempora magnam saepe voluptas.</p>
         </div>

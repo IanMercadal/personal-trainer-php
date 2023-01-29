@@ -1,10 +1,13 @@
 :root {
-    --primary-color: #49B51F;
+    /* --primary-color: #49B51F; */
+    --primary-color: #B3F45B;
     --secondary-color: #D3D3D3;
     --light-secondary-color: #e4e4e4;
-    --wildcard-green-color: #399F2E;
+    --darker-green-color: #399F2E;
+    --wildcard-green-color: #8df358;
     --wildcard-gray-color: #626363;
-    --primary-font: 'Open Sans', sans-serif;
+    --primary-font: 'Barlow', sans-serif;
+
 }
 
 *, *:before, *:after {
@@ -26,7 +29,7 @@ body {
     align-items: center;
     justify-content: space-between;
     height: 100vh;
-    background-color: #373737;
+    background-color: #2b2b22;
     color: white;
 }
 
@@ -34,7 +37,13 @@ h1 {
     font-size: 3rem;   
 }
 h2 {
-    font-size: 2.4rem;   
+    font-size: 2.8rem;
+    font-style: italic;   
+}
+h2 span {
+    font-size: 2.8rem;
+    font-style: italic;  
+    color: var(--primary-color);
 }
 h3 {
     font-size: 2rem;   
@@ -50,6 +59,7 @@ a {
 p, li {
     font-size: 1.4rem;
     padding:1rem;
+    line-height: 2.4rem;
 }
 .contenedor {
     max-width: 120rem;
@@ -70,6 +80,27 @@ button {
 }
 
 /* UTILS */
+.overlay{
+    display: grid;
+    place-items: center;
+    position: fixed;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    top:0;
+}
+.btn-cerrar{
+    width: 5rem;
+    height: 5rem;
+    background-color: #eee;
+    color: #000;
+    display: grid;
+    place-items: center;
+    font-weight: bold;
+}
+.btn-cerrar.hover{
+    cursor: pointer;
+}
 .circle {
     width: 100px;
     height: 100px;
@@ -81,7 +112,7 @@ button {
 .btn-create {
     margin: 1rem;
 }
-.btn-primary, .btn-editar, .btn-eliminar  {
+.btn-primary, .btn-editar, .btn-eliminar, .btn-tarifa  {
     padding: 1rem;
     width: 100px;
     color: #fff;
@@ -89,11 +120,21 @@ button {
     text-align: center;
     font-size: 1.4rem;
 }
+.btn-tarifa {
+    background-color: var(--primary-color);
+    color: #000;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 88% 100%, 0 100%);
+}
+.btn-tarifa:hover {
+    background-color: #000;
+    color: #eee;
+    transition: all ease-in 0.2s;
+}
 .btn-editar, .btn-eliminar {
     border-radius: 1rem;
 }
 .btn-primary:hover {
-    color: var(--wildcard-green-color);
+    color: #000;
     background-color: var(--secondary-color);
 }
 .btn-secondary {
@@ -110,13 +151,13 @@ button {
     color: var(--primary-color);
 }
 .btn-primary {
-    background-color: var(--wildcard-green-color);
+    background-color: var(--darker-green-color);
 }
 .btn-editar {
     background-color: #399F2E;
 }
 .btn-editar:hover {
-    background-image: linear-gradient(to bottom right, var(--primary-color), white);
+    background-image: linear-gradient(to bottom right, var(--darker-green-color), white);
 }
 .btn-eliminar {
     background-color: red;
@@ -149,12 +190,18 @@ label {
 }
 input, select {
     font-size: 1.4rem;
-    height: 30px;
+    height: 40px;
+    background-color: var(--wildcard-gray-color);
+    color: white;
     border: none;
-    border-bottom: 1px solid var(--wildcard-green-color);
+    border-radius: 0.5rem;
 }
 textarea {
+    background-color: var(--wildcard-gray-color);
+    border: none;
+    color: white;
     resize: none;
+    border-radius: 0.5rem;
 }
 .error {
     color: red;
@@ -194,21 +241,24 @@ textarea {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 2px solid var(--wildcard-green-color);
-    width: 100%;
+    background-color: var(--wildcard-gray-color);
+    clip-path: polygon(0% 0%, 86% 0%, 100% 12%, 100% 100%, 0% 100%);
+    width: 90%;
 }
-.check-list   {
+.check-list {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin-left: 2rem;
 }
 .check-list-parent {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    margin-left: 1rem;
+    color: white;
+    background-color: var(--wildcard-gray-color);
 }
 .check-list-parent {
     width: 100%;
@@ -223,7 +273,7 @@ nav {
     grid-template-columns: repeat(3,1fr);
     justify-items: center;
     align-items: center;
-    background-color: var(--light-secondary-color);
+    background-color: #373737;
 }
 .options {
     display: flex;
@@ -239,30 +289,30 @@ nav {
 }
 .nav-logo {
     width: 60px;
+    background-color: #eee;
+    border-radius: 50%;
 }
 .nav-link {
     font-size: 1.4rem;
     font-weight: bold;
-    color: #000;
+    color: #eee;
     padding: 1rem;
 }
 .nav-link:hover {
     background-color: #fff;
-    color: var(--wildcard-green-color);
     transition: all ease-in 0.2s;
-    color: var(--wildcard-green-color);
+    color: #000;
 }
 .login {
     font-size: 1.4rem;
     font-weight: bold;
-    color: var(--wildcard-green-color);
+    color: #000;
     padding: 1rem;
-    border: 2px solid var(--wildcard-green-color);
-    border-radius: 1rem;
+    background-color: var(--primary-color);
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 88% 100%, 0 100%);
 }
 .login:hover {
-    background-color: var(--wildcard-green-color);
-    color: #fff;
+    background-color: white;
     transition: all ease-in 0.2s;
 }
 .user-state-header {
@@ -329,6 +379,7 @@ nav {
 }
 #vector-izquierdo-inferior {
     background-color: var(--wildcard-green-color);
+    color: #000;
 }
 .vector-izquierdo svg {
     max-width: 100px;
@@ -340,64 +391,74 @@ nav {
     grid-template-columns: repeat(4,1fr);
     align-items: center;
     gap: 1rem;
-    color: #000;
+    color: #EEE;
 }
 .programa {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--light-secondary-color);
+    background-color: #3E3E3E;
     height: 400px;
+    /* clip-path: polygon(0% 0%, 75% 0%, 100% 12%, 100% 100%, 0% 100%); */
 }
 .programa:hover {
-    background-color: var(--wildcard-green-color);
-    color: #eee;
-    transform: scale(1.05);
+    /* transform: scale(1.05); */
     transition: ease-in-out 0.2s;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: var(--wildcard-green-color);
+    color: #000;
 }
-.programa:hover .circle {
-    background-color: #eee;
+.programa:hover .circle.programa-icono {
+    background-color: var(--wildcard-gray-color);
 }
 .programa-titulo {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
+    margin: 1rem;
 }
-
 /* TARIFAS */
 .precio-contenedor {
     width: 100%;
     height: 50px;
-    background-color: var(--primary-color);
-    color: white;
+    /* background-color: var(--primary-color); */
     text-align: center;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    /* -webkit-clip-path: polygon(0 0, 86% 0, 100% 100%, 0 100%);
-    clip-path: polygon(0 0, 86% 0, 100% 100%, 0 100%); */
+    -webkit-clip-path: polygon(0 0, 86% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 86% 0, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 86% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 86% 0, 100% 100%, 0 100%);
+    background-color: var(--wildcard-gray-color);
 }
 .tarifa-titulo {
     margin-top: auto;
     margin-bottom: auto;
     font-size: 2.1rem;
     font-weight: lighter ;
+    color: white;
 }
 .tarifas {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     align-items: stretch;
     gap: 2rem;
+    justify-items: center;
 }
 .tarifa {
     display: flex;
     flex-direction: column;
     align-items: center;
-    opacity: 80%;
+    width: 90%;
+}
+.tarifa:hover .precio-contenedor, .tarifa:hover .check-list-parent{
+    background-color: var(--light-secondary-color);
     color: #000;
-    border: 4px solid var(--primary-color);
-    background-color: white;
+    transition: ease-in 0.1s;
+}
+.tarifa:hover .tarifa-titulo {
+    color: #000;
 }
 .tarifa a {
     margin-bottom: 1rem;
@@ -411,10 +472,13 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 2px solid var(--wildcard-green-color);
+    background-color: var(--wildcard-gray-color);
+    clip-path: polygon(0% 0%, 75% 0%, 100% 12%, 100% 100%, 0% 100%);
+    height: 400px;
+    width: 90%;
 }
-.valor > img {
-    margin-top: 1rem;
+.valor > img, .circle > img {
+    width: 60px;
 }
 #contenedor-tarifa {
     margin-bottom: auto;
@@ -447,7 +511,7 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     gap: 1rem;
 }
 #contacta-nosotros {
@@ -464,15 +528,16 @@ nav {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 1rem;
+    justify-items: center;
 }
 .testimonial {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    background-color: var(--light-secondary-color);
+    background-color: #3E3E3E;;
     padding: 1rem;
-    color: #000;
+    color: #eee;
 }
 .testimonial:hover {
     background-color: var(--wildcard-green-color);
@@ -480,10 +545,11 @@ nav {
     color: #fff;
     transform: scale(1.05);
     transition: ease-in-out 0.2s;
+    color: #000;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .testimonial:hover .testimonial-nombre {
-    color: #eee;
+    color: #000;
 }
 .testimonial-imagen {
     width: 75px;
@@ -497,7 +563,7 @@ nav {
 #testimoniales-frase {
     color: var(--wildcard-green-color);
     font-size: 1.6rem;
-    text-align: center;
+    margin-bottom: 1rem;
 }
 
 /* LOGIN */
@@ -513,10 +579,7 @@ nav {
     align-items: center;
     justify-content: center;
     background-color: var(--primary-color);
-    color: #fff;
-}
-.left-column-login .circle {
-    background-color: #fff;
+    color: #000;
 }
 .login-form {
     display: flex;
@@ -536,7 +599,7 @@ nav {
     align-items: center;
     justify-content: center;
     background-color: var(--primary-color);
-    color: #fff;
+    color: #000;
     opacity: 80%;
     max-width: 400px;
     margin-left: auto;
@@ -624,16 +687,19 @@ nav {
     width: 100%;
 }
 .footer .options .nav-link {
-    color: white;
+    color: #eee;
 }
 .footer .options .nav-link:hover {
-    color: var(--wildcard-green-color);
+    color: #000;
 }
 .icons {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 2rem;
+}
+.footer .div-logo{
+    margin-top: 1rem;
 }
 
 /* ADMIN */
@@ -658,6 +724,7 @@ nav {
     align-items: center;
     justify-content: center;
     background-color: var(--wildcard-green-color);
+    color: #000;
 }
 #panel-usuarios, #panel-tarifas, #panel-solicitud  {
     display: flex;
@@ -695,6 +762,11 @@ nav {
         width: 60%;
     }
 }
+@media(min-width: 1024px) {
+    .img-overlay {
+        width: 50%;
+    }
+}
 @media (max-width: 1024px) {
     .sobre-nosotros {
         display: flex;
@@ -707,6 +779,9 @@ nav {
     .banner-info img {
         width: 80%;
     }
+    .img-overlay {
+        width: 80%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -714,6 +789,8 @@ nav {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
     }
     .programas, .tres-columnas {
         grid-template-columns: repeat(2,1fr);
@@ -728,8 +805,24 @@ nav {
     }
     .tarifas, .dos-columnas {
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .tarifa {
+        width: 300px;
+    }
+}
+@media (max-width: 748px) {
+    .vector-izquierdo {
+        clip-path: none;
+        display: none;
+    }
+    .banner {
+        grid-template-columns: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 }
 @media (max-width: 574px) {
@@ -746,13 +839,10 @@ nav {
     .programas, .tres-columnas  {
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
     .banner {
-        grid-template-columns: none;
-        display: flex;
-        flex-direction: column;
+        height: 300px;
     }
-    .vector-izquierdo {
-        clip-path: none;
-    }
+
 }
